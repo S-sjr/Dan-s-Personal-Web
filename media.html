@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人网站 - 媒体中心</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">DAN'S WORLD</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" data-i18n="nav.home">首页</a></li>
+                <li><a href="about.html" data-i18n="nav.about">关于我</a></li>
+                <li><a href="media.html" class="active" data-i18n="nav.media">媒体中心</a></li>
+                <li><a href="schedule.html" data-i18n="nav.schedule">演出日程</a></li>
+                <li><a href="contact.html" data-i18n="nav.contact">联系我</a></li>
+            </ul>
+            <div class="language-switch">
+                <button class="lang-btn" data-lang="zh">中文</button>
+    <button class="lang-btn active" data-lang="en">English</button>
+    <button class="lang-btn" data-lang="de">Deutsch</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <main class="media-main">
+        <div class="container">
+            <h1 class="page-title" data-i18n="media.title">媒体中心</h1>
+            <p class="page-description" data-i18n="media.description">探索我的视频作品、演出记录和幕后花絮</p>
+
+            <!-- 精选视频 -->
+            <section class="featured-video">
+                <h2 class="section-title" data-i18n="media.featured">精选视频</h2>
+                <div class="video-container">
+                    <iframe width="100%" height="500" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p class="video-caption" data-i18n="media.featuredCaption">最新音乐录影带《艺术的旋律》</p>
+            </section>
+
+            <!-- 视频库 -->
+            <section class="video-gallery">
+                <h2 class="section-title" data-i18n="media.gallery">视频库</h2>
+                <div class="gallery-grid">
+                    <div class="video-item">
+                        <div class="video-thumbnail">
+                            <img src="img/video1.jpg" alt="视频缩略图1">
+                            <div class="play-icon"></div>
+                        </div>
+                        <h3 data-i18n="media.video1.title">现场演出 - 巴黎</h3>
+                        <p data-i18n="media.video1.date">2023年3月15日</p>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-thumbnail">
+                            <img src="img/video2.jpg" alt="视频缩略图2">
+                            <div class="play-icon"></div>
+                        </div>
+                        <h3 data-i18n="media.video2.title">创作过程纪实</h3>
+                        <p data-i18n="media.video2.date">2023年1月22日</p>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-thumbnail">
+                            <img src="img/video3.jpg" alt="视频缩略图3">
+                            <div class="play-icon"></div>
+                        </div>
+                        <h3 data-i18n="media.video3.title">艺术家访谈</h3>
+                        <p data-i18n="media.video3.date">2022年11月10日</p>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-thumbnail">
+                            <img src="img/video4.jpg" alt="视频缩略图4">
+                            <div class="play-icon"></div>
+                        </div>
+                        <h3 data-i18n="media.video4.title">幕后花絮 - 录音棚</h3>
+                        <p data-i18n="media.video4.date">2022年9月5日</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Dan's World. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+                <a href="#">YouTube</a>
+                <a href="#">TikTok</a>
+                <a href="#">小红书</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/language.js"></script>
+</body>
+</html>
