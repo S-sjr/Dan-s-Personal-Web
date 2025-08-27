@@ -6,8 +6,8 @@ const translations = {
         'nav.media': '媒体中心',
         'nav.schedule': '演出日程',
         'nav.contact': '联系我',
-        'hero.title': '欢迎来到我的世界',
-        'hero.subtitle': '探索艺术、音乐与文化的交融',
+        'hero.title': '帅文波',
+        'hero.subtitle': '假声男高音',
         'hero.button': '了解更多',
         'about.subtitle': '关于我',
         'about.text1': '我是一位热爱艺术与音乐的专业人士...',
@@ -76,6 +76,8 @@ const translations = {
         'contact.description': '有任何问题或合作意向，请随时与我联系',
         'contact.formTitle': '发送消息',
         'contact.nameLabel': '您的姓名',
+        'contact.lastNameLabel': '姓',
+        'contact.firstNameLabel': '名',
         'contact.emailLabel': '电子邮箱',
         'contact.subjectLabel': '主题',
         'contact.messageLabel': '消息内容',
@@ -97,10 +99,10 @@ const translations = {
         'nav.home': 'Home',
         'nav.about': 'About Me',
         'nav.media': 'Media Center',
-        'nav.schedule': 'Schedule',
+        'nav.schedule': 'Calendar',
         'nav.contact': 'Contact',
-        'hero.title': 'Welcome to My World',
-        'hero.subtitle': 'Exploring the Fusion of Art, Music and Culture',
+        'hero.title': 'WenBo Shuai',
+        'hero.subtitle': 'Countertenor',
         'hero.button': 'Learn More',
         'about.subtitle': 'About Me',
         'about.text1': 'I am a professional passionate about art and music...',
@@ -136,7 +138,7 @@ const translations = {
         'media.video3.date': 'November 10, 2022',
         'media.video4.title': 'Behind the Scenes - Recording Studio',
         'media.video4.date': 'September 5, 2022',
-        'schedule.title': 'Performance Schedule',
+        'schedule.title': 'Calendar',
         'schedule.description': 'Check out my upcoming performances and events',
         'schedule.dateHeader': 'Date',
         'schedule.eventHeader': 'Event',
@@ -169,6 +171,8 @@ const translations = {
         'contact.description': 'If you have any questions or cooperation intentions, please feel free to contact me',
         'contact.formTitle': 'Send a Message',
         'contact.nameLabel': 'Your Name',
+        'contact.lastNameLabel': 'Last Name',
+        'contact.firstNameLabel': 'First Name',
         'contact.emailLabel': 'Email Address',
         'contact.subjectLabel': 'Subject',
         'contact.messageLabel': 'Message Content',
@@ -190,10 +194,10 @@ const translations = {
         'nav.home': 'Startseite',
         'nav.about': 'Über mich',
         'nav.media': 'Medienzentrum',
-        'nav.schedule': 'Aufführungsplan',
+        'nav.schedule': 'Kalender',
         'nav.contact': 'Kontakt',
-        'hero.title': 'Willkommen in meiner Welt',
-        'hero.subtitle': 'Erkundung der Verschmelzung von Kunst, Musik und Kultur',
+        'hero.title': 'WenBo Shuai',
+        'hero.subtitle': 'Countertenor',
         'hero.button': 'Mehr erfahren',
         'about.title': 'Über mich',
         'about.subtitle': 'Künstlerischer Lebensweg',
@@ -230,7 +234,7 @@ const translations = {
         'media.video3.date': '10. November 2022',
         'media.video4.title': 'Backstage - Tonstudio',
         'media.video4.date': '5. September 2022',
-        'schedule.title': 'Aufführungsplan',
+        'schedule.title': 'Kalender',
         'schedule.description': 'Schauen Sie sich meine bevorstehenden Aufführungen und Veranstaltungen an',
         'schedule.dateHeader': 'Datum',
         'schedule.eventHeader': 'Veranstaltung',
@@ -263,6 +267,8 @@ const translations = {
         'contact.description': 'Wenn Sie Fragen haben oder Kooperationsabsichten, kontaktieren Sie mich bitte',
         'contact.formTitle': 'Nachricht senden',
         'contact.nameLabel': 'Ihr Name',
+        'contact.lastNameLabel': 'Nachname',
+        'contact.firstNameLabel': 'Vorname',
         'contact.emailLabel': 'E-Mail-Adresse',
         'contact.subjectLabel': 'Betreff',
         'contact.messageLabel': 'Nachrichtentext',
@@ -296,6 +302,15 @@ function changeLanguage(lang) {
         const key = element.dataset.i18n;
         if (translations[lang] && translations[lang][key]) {
             element.textContent = translations[lang][key];
+            
+            // 只为英文和德文版本的hero-subtitle添加斜体样式，hero.title不使用斜体
+            if ((lang === 'en' || lang === 'de') && 
+                key === 'hero.subtitle') {
+                element.style.fontStyle = 'italic';
+            } else {
+                // 其他情况移除斜体样式
+                element.style.fontStyle = 'normal';
+            }
         }
     });
 }

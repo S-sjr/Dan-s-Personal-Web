@@ -212,27 +212,186 @@ body {
 
 /* 英雄区域 */
  .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/hero.jpg');
-    background-size: cover;
-    background-position: center;
+    background-color: var(--light-color);
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--white-color);
+    color: var(--dark-color);
+    position: relative;
+    overflow: hidden;
+}
+
+/* 英雄区域容器 - 左侧文字，右侧轮播 */
+ .hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 2rem 0;
+}
+
+/* 左侧文字内容 */
+ .hero-text {
+    flex: 1;
+    max-width: 50%;
+    padding-right: 2rem;
+    text-align: left;
 }
 
  .hero-title {
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: var(--white-color);
+    color: var(--dark-color);
+    line-height: 1.2;
 }
 
  .hero-subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
     font-weight: 300;
+    color: var(--dark-color);
+    font-style: italic;
+    /* 使用优雅的花体字体组合 */
+    font-family: 'Edwardian Script ITC', 'French Script MT', 'Lucida Handwriting', 'Goudy Old Style', 'Palatino Linotype', serif;
+}
+
+/* 右侧图片轮播 */
+ .hero-slider {
+    flex: 1;
+    max-width: 50%;
+    height: 80vh;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+ .slider-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+ .slider-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    /* 使用更平滑的贝塞尔曲线，使过渡更加自然流畅 */
+}
+
+ .slider-image.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+/* 轮播控制按钮 */
+ .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ .slider-btn:hover {
+    background-color: var(--white-color);
+    transform: translateY(-50%) scale(1.1);
+}
+
+ .prev-btn {
+    left: 15px;
+}
+
+ .next-btn {
+    right: 15px;
+}
+
+/* 轮播指示器 */
+ .slider-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+ .indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid var(--white-color);
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+ .indicator.active {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* 响应式设计 */
+@media (max-width: 992px) {
+    .hero-container {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .hero-text {
+        max-width: 100%;
+        padding-right: 0;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    
+    .hero-slider {
+        max-width: 100%;
+        height: 50vh;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-slider {
+        height: 40vh;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .slider-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
 }
 
 /* 特色区域 */
@@ -308,13 +467,19 @@ body {
 
  .social-links {
     display: flex;
+    align-items: center; /* 垂直居中对齐 */
+    justify-content: center; /* 水平居中对齐 */
+    gap: 1.5rem; /* 使用gap替代margin-left，确保间距更加均匀 */
 }
 
  .social-links a {
     color: var(--white-color);
-    margin-left: 1.5rem;
     position: relative;
     transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0; /* 移除原有的margin-left */
 }
 
 .social-links a::after {
@@ -340,13 +505,23 @@ body {
     color: var(--primary-color);
 }
 
-/* 社交媒体图标统一样式 */
+/* 社交媒体图标样式 - 统一颜色和大小 */
+ .social-links a img {
+    width: 24px;
+    height: 24px;
+    transition: var(--transition);
+    display: block; /* 确保图片作为块级元素，避免基线对齐问题 */
+}
+
+ .social-links a:hover img {
+    transform: scale(1.1); /* 悬停时略微放大 */
+}
 .social-links .icon {
     fill: var(--white-color);
     transition: fill 0.3s ease;
     vertical-align: middle;
-    width: 22px;
-    height: 22px;
+    width: 24px; /* 统一为24px，与img保持一致 */
+    height: 24px; /* 统一为24px，与img保持一致 */
 }
 
 .social-links .icon:hover {

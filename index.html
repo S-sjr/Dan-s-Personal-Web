@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>个人网站 - 首页</title>
+    <title>WenBo's World</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap">
 </head>
@@ -12,7 +12,7 @@
     <nav class="navbar">
         <div class="container">
             <div class="logo">
-                <a href="index.html">DAN'S WORLD</a>
+                <a href="index.html">WENBO'S </a>
             </div>
             <ul class="nav-links">
                 <li><a href="index.html" class="active" data-i18n="nav.home">首页</a></li>
@@ -29,12 +29,33 @@
         </div>
     </nav>
 
-    <!-- 英雄区域 -->
+    <!-- 英雄区域 - 左侧文字，右侧图片轮播 -->
     <header class="hero">
-        <div class="container">
-            <h1 class="hero-title" data-i18n="hero.title">欢迎来到我的世界</h1>
-            <p class="hero-subtitle" data-i18n="hero.subtitle">探索艺术、音乐与文化的交融</p>
-            <a href="about.html" class="btn" data-i18n="hero.button">了解更多</a>
+        <div class="container hero-container">
+            <div class="hero-text">
+                <h1 class="hero-title" data-i18n="hero.title">帅文波</h1>
+                <p class="hero-subtitle" data-i18n="hero.subtitle">假声男高音</p>
+                <a href="about.html" class="btn" data-i18n="hero.button">了解更多</a>
+            </div>
+            <div class="hero-slider">
+                <div class="slider-container">
+                    <img src="img/LandingPageSlides/微信图片_20250827115845_201_118.jpg" alt="演出照片1" class="slider-image active">
+                    <img src="img/LandingPageSlides/微信图片_20250827115856_202_118.jpg" alt="演出照片2" class="slider-image">
+                    <img src="img/LandingPageSlides/微信图片_20250827115939_205_118.jpg" alt="演出照片3" class="slider-image">
+                    <img src="img/LandingPageSlides/微信图片_20250827115952_206_118.jpg" alt="演出照片4" class="slider-image">
+                    <img src="img/LandingPageSlides/微信图片_20250827115959_207_118.jpg" alt="演出照片5" class="slider-image">
+                    <img src="img/LandingPageSlides/微信图片_20250827120045_209_118.png" alt="演出照片6" class="slider-image">
+                </div>
+                <!-- 轮播指示器 -->
+                <div class="slider-indicators">
+                    <button class="indicator active" data-index="0"></button>
+                    <button class="indicator" data-index="1"></button>
+                    <button class="indicator" data-index="2"></button>
+                    <button class="indicator" data-index="3"></button>
+                    <button class="indicator" data-index="4"></button>
+                    <button class="indicator" data-index="5"></button>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -45,12 +66,12 @@
         <div class="container">
             <p>&copy; 2025 Dan's World. All rights reserved.</p>
             <div class="social-links">
-                <a href="#">Facebook</a>
-                <a href="#">Instagram</a>
-                <a href="#">Twitter</a>
-                <a href="#">YouTube</a>
-                <a href="#">TikTok</a>
-                <a href="#">小红书</a>
+                <a href="#" aria-label="Facebook"><img src="img/facebook (1).svg" alt="Facebook" style="width: 24px; height: 24px;"></a>
+                <a href="#" aria-label="Instagram"><img src="img/instagram-fill.svg" alt="Instagram" style="width: 24px; height: 24px;"></a>
+                <a href="#" aria-label="WhatsApp"><img src="img/whatsapp (1).svg" alt="WhatsApp" style="width: 24px; height: 24px;"></a>
+                <a href="#" aria-label="YouTube"><img src="img/YouTube_youtube7.svg" alt="YouTube" style="width: 24px; height: 24px;"></a>
+                <a href="#" aria-label="TikTok"><img src="img/抖音.svg" alt="TikTok" style="width: 20px; height: 20px;"></a>
+                <a href="#" aria-label="小红书"><img src="img/小红书.svg" alt="小红书" style="width: 24px; height: 24px;"></a>
             </div>
         </div>
     </footer>

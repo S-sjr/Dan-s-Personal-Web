@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>个人网站 - 联系我</title>
+    <title>WenBo's World</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap">
 </head>
@@ -12,7 +12,7 @@
     <nav class="navbar">
         <div class="container">
             <div class="logo">
-                <a href="index.html">DAN'S WORLD</a>
+                <a href="index.html">WENBO'S </a>
             </div>
             <ul class="nav-links">
                 <li><a href="index.html" data-i18n="nav.home">首页</a></li>
@@ -42,7 +42,6 @@
                     <div class="contact-info" style="max-width: 600px; margin: 0 auto 3rem;">
                         <ul class="contact-details">
                             <li class="email" data-i18n="contact.email">邮箱: contact@dansworld.com</li>
-                            <li class="phone" data-i18n="contact.phone">电话: +49 123 4567 8910</li>
                         </ul>
 
                     </div>
@@ -51,20 +50,26 @@
                     <div class="contact-form" style="max-width: 600px; margin: 0 auto; background-color: #f9f9f9; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center;">
                         <h2 class="section-title" data-i18n="contact.formTitle">发送消息</h2>
                         <form>
-                            <div class="form-group">
-                                <label for="name" data-i18n="contact.nameLabel">您的姓名</label>
-                                <input type="text" id="name" required>
+                            <div style="display: flex; gap: 1rem;">
+                                <div class="form-group" style="flex: 1;">
+                                    <label for="lastName" data-i18n="contact.lastNameLabel" style="text-align: left; display: block;">姓</label>
+                                    <input type="text" id="lastName" required>
+                                </div>
+                                <div class="form-group" style="flex: 1;">
+                                    <label for="firstName" data-i18n="contact.firstNameLabel" style="text-align: left; display: block;">名</label>
+                                    <input type="text" id="firstName" required>
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label for="email" data-i18n="contact.emailLabel">电子邮箱</label>
+                                <label for="email" data-i18n="contact.emailLabel" style="text-align: left; display: block;">电子邮箱</label>
                                 <input type="email" id="email" required>
                             </div>
                             <div class="form-group">
-                                <label for="subject" data-i18n="contact.subjectLabel">主题</label>
+                                <label for="subject" data-i18n="contact.subjectLabel" style="text-align: left; display: block;">主题</label>
                                 <input type="text" id="subject" required>
                             </div>
                             <div class="form-group">
-                                <label for="message" data-i18n="contact.messageLabel">消息内容</label>
+                                <label for="message" data-i18n="contact.messageLabel" style="text-align: left; display: block;">消息内容</label>
                                 <textarea id="message" rows="5" required></textarea>
                             </div>
                             <button type="submit" class="btn" data-i18n="contact.submitBtn">发送消息</button>
@@ -80,12 +85,12 @@
         <div class="container">
             <p>&copy; 2025 Dan's World. All rights reserved.</p>
             <div class="social-links">
-                <a href="#">Facebook</a>
-                <a href="#">Instagram</a>
-                <a href="#">Twitter</a>
-                <a href="#">YouTube</a>
-                <a href="#">TikTok</a>
-                <a href="#">小红书</a>
+                <a href="#" aria-label="Facebook"><img src="img/facebook (1).svg" alt="Facebook" style="width: 24px; height: 24px;"></a>
+                <a href="#" aria-label="Instagram"><img src="img/instagram-fill.svg" alt="Instagram" style="width: 24px; height: 24px;"></a>
+                <a href="#" aria-label="WhatsApp"><img src="img/whatsapp (1).svg" alt="WhatsApp" style="width: 24px; height: 24px;"></a>
+                <a href="#" aria-label="YouTube"><img src="img/YouTube_youtube7.svg" alt="YouTube" style="width: 24px; height: 24px;"></a>
+                <a href="#" aria-label="TikTok"><img src="img/抖音.svg" alt="TikTok" style="width: 20px; height: 20px;"></a>
+                <a href="#" aria-label="小红书"><img src="img/小红书.svg" alt="小红书" style="width: 24px; height: 24px;"></a>
             </div>
         </div>
     </footer>
