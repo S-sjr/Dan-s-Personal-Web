@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WenBo's World</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&family=Cormorant+Garamond:wght@400;700;900&display=swap">
 </head>
 <body>
     <!-- 导航栏 -->
@@ -32,28 +32,31 @@
     <!-- 英雄区域 - 左侧文字，右侧图片轮播 -->
     <header class="hero">
         <div class="container hero-container">
-            <div class="hero-text">
-                <h1 class="hero-title" data-i18n="hero.title">帅文波</h1>
-                <p class="hero-subtitle" data-i18n="hero.subtitle">假声男高音</p>
-                <a href="about.html" class="btn" data-i18n="hero.button">了解更多</a>
-            </div>
-            <div class="hero-slider">
-                <div class="slider-container">
-                    <img src="img/LandingPageSlides/微信图片_20250827115845_201_118.jpg" alt="演出照片1" class="slider-image active">
-                    <img src="img/LandingPageSlides/微信图片_20250827115856_202_118.jpg" alt="演出照片2" class="slider-image">
-                    <img src="img/LandingPageSlides/微信图片_20250827115939_205_118.jpg" alt="演出照片3" class="slider-image">
-                    <img src="img/LandingPageSlides/微信图片_20250827115952_206_118.jpg" alt="演出照片4" class="slider-image">
-                    <img src="img/LandingPageSlides/微信图片_20250827115959_207_118.jpg" alt="演出照片5" class="slider-image">
-                    <img src="img/LandingPageSlides/微信图片_20250827120045_209_118.png" alt="演出照片6" class="slider-image">
+            <!-- 新添加的div组，用于包裹文字和图片 -->
+            <div class="hero-content-group">
+                <div class="hero-text">
+                    <h1 class="hero-title" data-i18n="hero.title">帅文波</h1>
+                    <p class="hero-subtitle" data-i18n="hero.subtitle">假声男高音</p>
+                    <a href="about.html" class="btn" data-i18n="hero.button">了解更多</a>
                 </div>
-                <!-- 轮播指示器 -->
-                <div class="slider-indicators">
-                    <button class="indicator active" data-index="0"></button>
-                    <button class="indicator" data-index="1"></button>
-                    <button class="indicator" data-index="2"></button>
-                    <button class="indicator" data-index="3"></button>
-                    <button class="indicator" data-index="4"></button>
-                    <button class="indicator" data-index="5"></button>
+                <div class="hero-slider">
+                    <div class="slider-container">
+                        <img src="img/LandingPageSlides/微信图片_20250827115845_201_118.jpg" alt="演出照片1" class="slider-image active">
+                        <img src="img/LandingPageSlides/微信图片_20250827115856_202_118.jpg" alt="演出照片2" class="slider-image">
+                        <img src="img/LandingPageSlides/微信图片_20250827115939_205_118.jpg" alt="演出照片3" class="slider-image">
+                        <img src="img/LandingPageSlides/微信图片_20250827115952_206_118.jpg" alt="演出照片4" class="slider-image">
+                        <img src="img/LandingPageSlides/微信图片_20250827115959_207_118.jpg" alt="演出照片5" class="slider-image">
+                        <img src="img/LandingPageSlides/微信图片_20250827120045_209_118.png" alt="演出照片6" class="slider-image">
+                    </div>
+                    <!-- 轮播指示器 -->
+                    <div class="slider-indicators">
+                        <button class="indicator active" data-index="0"></button>
+                        <button class="indicator" data-index="1"></button>
+                        <button class="indicator" data-index="2"></button>
+                        <button class="indicator" data-index="3"></button>
+                        <button class="indicator" data-index="4"></button>
+                        <button class="indicator" data-index="5"></button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -66,16 +69,17 @@
         <div class="container">
             <p>&copy; 2025 Dan's World. All rights reserved.</p>
             <div class="social-links">
-                <a href="#" aria-label="Facebook"><img src="img/facebook (1).svg" alt="Facebook" style="width: 24px; height: 24px;"></a>
-                <a href="#" aria-label="Instagram"><img src="img/instagram-fill.svg" alt="Instagram" style="width: 24px; height: 24px;"></a>
-                <a href="#" aria-label="WhatsApp"><img src="img/whatsapp (1).svg" alt="WhatsApp" style="width: 24px; height: 24px;"></a>
-                <a href="#" aria-label="YouTube"><img src="img/YouTube_youtube7.svg" alt="YouTube" style="width: 24px; height: 24px;"></a>
-                <a href="#" aria-label="TikTok"><img src="img/抖音.svg" alt="TikTok" style="width: 20px; height: 20px;"></a>
-                <a href="#" aria-label="小红书"><img src="img/小红书.svg" alt="小红书" style="width: 24px; height: 24px;"></a>
+                <a href="https://www.facebook.com/share/1BH8KBy3h1/?mibextid=wwXIfr" target="_blank" aria-label="Facebook"><img src="img/facebook (1).svg" alt="Facebook" style="width: 24px; height: 24px;"></a>
+                <a href="https://www.instagram.com/dandan_countertenor?igsh=MXV2bGs4M21oNjkwcA%3D%3D&utm_source=qr" target="_blank" aria-label="Instagram"><img src="img/instagram-fill.svg" alt="Instagram" style="width: 24px; height: 24px;"></a>
+                <a href="https://youtube.com/@wenbo_shuai?si=xn_WkDfPoGROIm0v" target="_blank" aria-label="YouTube"><img src="img/YouTube_youtube7.svg" alt="YouTube" style="width: 24px; height: 24px;"></a>
+                <a href="https://v.douyin.com/uzmfJTGJzhM/" target="_blank" aria-label="TikTok"><img src="img/抖音.svg" alt="TikTok" style="width: 20px; height: 20px;"></a>
+                <a href="https://xhslink.com/m/6yCJ76c0op" target="_blank" aria-label="小红书"><img src="img/小红书.svg" alt="小红书" style="width: 24px; height: 24px;"></a>
             </div>
         </div>
     </footer>
 
+    <!-- EmailJS库文件引入 - 使用配置文档中推荐的版本 -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/language.js"></script>
 </body>
