@@ -10,29 +10,27 @@ const translations = {
         'hero.subtitle': '假声男高音',
         'hero.button': '了解更多',
         'about.subtitle': '关于我',
-        'about.bio1': '他被欧洲的乐评⼈称之为：⼀个充满戏剧张⼒的嗓⾳。',
-        'about.bio2': '本科就读于上海⾳乐学院声乐歌剧系（2020-2025），跟随上海⾳乐学院声乐歌剧系施恒教授、艺术指导吴越⼥⼠。他也是上海⾳乐学院声乐歌剧系历史上的第⼀位假声男⾼⾳。',
-        'about.bio3': '从2025起，作为研究⽣就读于德国斯图加特国⽴⾳乐与表演艺术学院声乐歌剧系，跟随克罗地亚籍⼥中⾳歌唱家Diana Haller学习。 他在欧洲求学期间跟随了世界著名花腔⼥⾼⾳歌唱家Cheryl Studer⼥⼠，柏林汉斯艾斯勒⾳乐学院教授/声乐教育家Renata Faltin⼥⼠学习，同时他还接受过意⼤利⼥⾼⾳歌唱家Francesco Bruni，韩国男中⾳歌唱家ChangHan Lim，旅德钢琴家⻢源⼥⼠、柏林国家歌剧院Mr.Klauss Sallmann与Mr.Uwe Griem、法兰克福国家歌剧院Mr.Felice Venanzoni…等等的⽼师们的指导与帮助。',
-        'about.bio4': '2025年他加⼊了由世界著名男中⾳歌唱家Thomas Hampson和⼥⾼⾳歌唱家Melanie Diener在德国Waiblingen市组织的国际歌剧⼯作室Internationale Opernwerkstatt Waiblingen，是该项⽬2025年度歌剧奖学⾦的获得者。',
+        'about.bio1': '他被欧洲的乐评⼈称之为：⼀个充满戏剧张⼒的嗓⾳。\n' + 
+            '本科就读于上海音乐学院声乐歌剧系（2020-2025），跟随上海音乐学院声乐歌剧系施恒教授、艺术指导吴越女士。他也是上海音乐学院声乐歌剧系历史上的第一位假声男高音。\n ' +
+            '从2025起，作为研究生就读于德国斯图加特国立音乐与表演艺术学院声乐歌剧系，跟随克罗地亚籍女中音歌唱家DianaHaller学习。\n'+
+            '他在欧洲求学期间跟随了世界著名花腔女高音歌唱家Cheryl Studer女士，柏林汉斯艾斯勒音乐学院教授/声乐教育家Renata Faltin女士学习，同时他还接受过意大利女高音歌唱家Francesco Bruni，韩国男中音歌唱家ChangHan Lim，旅德钢琴家⻢源女士、柏林国家歌剧院Mr.Klauss Sallmann与Mr.Uwe Griem、法兰克福国家歌剧院Mr.Felice Venanzoni...等等的老师们的指导与帮助。\n'+
+            '2025年他加入了由世界著名男中音歌唱家Thomas Hampson和女高音歌唱家Melanie Diener在德国Waiblingen市组织的国际歌剧工作室Internationale Opernwerkstatt Waiblingen，是该项目2025年度歌剧奖学金的获得者。',
+        'about.bio2': '近年来，他的身影活跃在世界众多国际知名赛事，并获得了一些成绩：\n' +
+            '• 希腊“International Association of Art＇THE MUSE ＇”比赛获得一等奖“FIRST PRIZE”\n' +
+            '• 意大利“Bologna International Vocal Competition博洛尼亚国际声乐大赛”第五名/ “ENCOURAGEMENT AWARD”\n' +
+            '• 意大利维罗纳“VINCERÒ World Opera Competition世界歌剧大赛”⻘年组第二名“2°PREMIO-GIOVANI”，随后在正赛\n' +
+            '组别中获得了“VINCERÒ World Opera Competition”第三名 “3°PREMIO”和评论家特别奖“PREMIO CRITICA”\n' +
+            '• 意大利第七届“"Giovan Battista Rubini"国际声乐比赛”决赛奖“PREMIO FINALISTI”\n' +
+            '• 韩国Daegu举办的第42届“大邱国际声乐大赛Daegu International Vocal Music Competition”的决赛奖“FINALIST”以及大都会歌剧奖“SPECIAL PRIZE-METROPOLITAN OPERA COMPANY“\n' +
+            '他入围过西班牙Barcelona举办的第60-62届 “Tenor Viñas声乐大赛”并闯入半决赛、瑞典Norrköping举办的“Wilhelm Stenhammar国际声乐比赛”并进入半决赛，以及在奥地利Innsbruck举办的著名巴洛克声乐歌剧大赛第15届“Pietro Antonio Cesti国际巴洛克歌剧大赛”并入围半决赛。此外他还入围了例如美国New York举办的第34届“Opera at Florham\'s国际声乐比赛”、第23届“Ottavio ZIINO国际歌剧比赛”，葡萄牙举办的“Cascais International Opera Competition”等众多国际职业大赛。',
+        'about.bio3': '2025年9月，他加入了德国Waiblingen市，由Thomas Hampsen和Melanie Diener共同举办的International Opernwerkstatt，并与Württembergischen Philharmonie Reutlingen共同演绎音乐会。\n'+
+            '2023年他在意大利博洛尼亚的Sala Mozart in the Accademia Filarmonic参与了“博洛尼亚国际声乐比赛获奖者音乐会”。在意大利维罗纳与Teatro Filarmonico剧院乐团合作演出了“Vincerò世界歌剧大赛决赛音乐会”。2022年五月在上海音乐学院“音才助飞”项目的帮助下，他成功在上音歌剧院举办“璀璨明珠”巴洛克音乐实践音乐会。在上海音乐学院室内乐团与恰空古乐团在贺绿汀音乐厅的合作音乐会——《巴洛克室内乐音乐会》中担任Purcell珀塞尔歌剧《The Fairy Queen仙后》Alto主唱与四重合唱。2023年11月参加了由上音歌剧院举办的第16届“艺术歌曲之夜·德俄大师”音乐会。\n' +
+            '自2019年起，他成为法国阿尔日莱斯国际艺术节的常驻演员，参与了《Faust浮士德》和《L’Elisir D’Amore爱之甘醇》等歌剧的制作，在上海他饰演了由施恒教授执导的古诺歌剧《Faust》中的角色“Siebel”与歌剧《Romeo et Juliette罗密欧与朱丽叶》中的角色“Stepheno”。',
         'about.resumeCn': '下载简历',
         'about.resumeEn': 'Download Resume',
-        'about.bio5': '近年来，他的身影活跃在世界众多国际知名赛事，并获得了⼀些成绩：',
-        'about.bio6': '·希腊"International Association of Art\'THE MUSE \'"比赛获得一等奖"FIRST PRIZE"',
-        'about.bio7': '·意大利"Bologna International Vocal Competition博洛尼亚国际声乐大赛"第五名/ "ENCOURAGEMENT AWARD"',
-        'about.bio8': '·意大利维罗纳"VINCERÒ World Opera Competition世界歌剧大赛"青年组第二名"2°PREMIO-GIOVANI"，随后在正赛组别中获得了"VINCERÒ World Opera Competition"第三名 "3°PREMIO"和评论家特别奖"PREMIO CRITICA"',
-        'about.bio9': '·意大利第七届"Giovan Battista Rubini"国际声乐比赛"决赛奖"PREMIO FINALISTI"',
-        'about.bio10': '·韩国Daegu举办的第42届"大邱国际声乐大赛Daegu International Vocal Music Competition"的决赛奖"FINALIST"以及大都会歌剧奖"SPECIAL PRIZE-METROPOLITAN OPERA COMPANY"',
-        'about.bio11': '他入围过西班牙Barcelona举办的第60-62届 “Tenor Viñas声乐大赛”并闯入半决赛、瑞典Norrköping举办的“Wilhelm Stenhammar国际声乐比赛”并进入半决赛，以及在奥地利Innsbruck举办的著名巴洛克声乐歌剧大赛第15届“Pietro Antonio Cesti国际巴洛克歌剧大赛”并入围半决赛。此外他还入围了例如美国New York举办的第34届“Opera at Florham\'s国际声乐比赛”、第23届“Ottavio ZIINO国际歌剧比赛”，葡萄牙举办的“Cascais International Opera Competition”等众多国际职业大赛。',
-        'about.bio12': '2025年9⽉，他加⼊了德国Waiblingen市，由Thomas Hampsen和Melanie Diener共同举办的International Opernwerkstatt，并与Württembergischen Philharmonie Reutlingen共同演绎⾳乐会。 ',
-        'about.bio13': '2023年他在意大利博洛尼亚的Sala Mozart in the Accademia Filarmonic参与了“博洛尼亚国际声乐比赛获奖者音乐会”。在意大利维罗纳与Teatro Filarmonico剧院乐团合作演出了“Vincerò世界歌剧大赛决赛音乐会”。2022年五月在上海音乐学院“音才助飞”项目的帮助下，他成功在上音歌剧院举办“璀璨明珠”巴洛克音乐实践音乐会。在上海音乐学院室内乐团与恰空古乐团在贺绿汀音乐厅的合作音乐会 - 《巴洛克室内乐音乐会》中担任Purcell珀塞尔歌剧《The Fairy Queen仙后》Alto主唱与四重合唱。2023年11月参加了由上音歌剧院举办的第16届“艺术歌曲之夜·德俄大师”音乐会。',
-        'about.bio14': '自2019年起，他成为法国阿尔日莱斯国际艺术节的常驻演员，参与了《Faust浮士德》和《L’Elisir D’Amore爱之甘醇》等歌剧的制作，在上海他饰演了由施恒教授执导的古诺歌剧《Faust》中的角色“Siebel”与歌剧《Romeo et Juliette罗密欧与朱丽叶》中的角色“Stepheno”。',
         'features.title': '过往活动',
-        'features.item1.title': '音乐创作',
-        'features.item1.desc': '融合古典与现代元素的原创音乐作品',
-        'features.item2.title': '舞台表演',
-        'features.item2.desc': '充满激情与创意的现场演出',
-        'features.item3.title': '文化探索',
-        'features.item3.desc': '跨越不同文化的艺术交流与探索',
+        'features.item1.title': '个人形象',
+        'features.item2.title': '演出记录',
         'media.title': '媒体中心',
         'media.description': '这里展示我的最新演出视频和媒体内容',
         'media.featured': '精选视频',
@@ -97,7 +95,15 @@ const translations = {
         'contact.form.name': '姓名',
         'contact.form.email': '电子邮箱',
         'contact.form.message': '留言',
-        'contact.form.submit': '发送'
+        'contact.form.submit': '发送',
+        'gallery.personal.title': '个人形象',
+        'gallery.personal.caption1': '艺术写真',
+        'gallery.personal.caption2': '比赛照片',
+        'gallery.personal.caption3': '角色定妆照',
+        'gallery.performance.title': '演出记录',
+        'gallery.performance.caption1': 'Vincerò世界歌剧大赛',
+        'gallery.performance.caption2': 'Romeo et Juliette - Shanghai',
+        'gallery.performance.caption3': '音乐会演出'
     },
     'en': {
         'nav.home': 'Home',
@@ -109,32 +115,24 @@ const translations = {
         'hero.subtitle': 'Countertenor',
         'hero.button': 'Learn More',
         'about.subtitle': 'About Me',
-        'about.bio1': 'WenBo Shuai was commented by European critics as: a voice full of dramatic tension. ',
-        'about.bio2': 'He won awards in some international competitions, such as: ',
-        'about.bio3': '• 42 ° Daegu International Vocal Music Competition- FINALIST / SPECIAL PRIZE“METROPOLITAN OPERA COMPANY”\n' +
-        '• VII Concorso Lirico Internazionale "Giovan Battista Rubini"- Finalist\n' +
-        '• 3rd VINCERÒ Opera World Competition- 3° PREMIO / PREMIO "CRITICA"\n' +
-        '• 2023 Bologna International Voice Competition-5° PREMIO-ENCOURAGEMENT AWARD… ',
-        'about.bio4': 'In 2025 he entered the Staatliche Hochschule für Musik und Darstellende Kunst Stuttgart to study（Gesang-Oper with Diana Haller) . From 2023, he has been studying in Europe under Prof. Renate Faltin (Hochschule für Musik Hanns Eisler), Prof. Cheryl Studer (Hochschule für Musik Würzburg), Mr. Klaus Sallmann(Staatsoper Berlin),Mr. Uwe Griem, and Mr. Felice Venanzoni (Oper Frankfurt). ',
+        'about.bio1': 'WenBo Shuai was commented by European critics as: a voice full of dramatic tension.\n' + 
+            'He won awards in some international competitions, such as:\n ' +
+            '• 42 ° Daegu International Vocal Music Competition- FINALIST / SPECIAL PRIZE“METROPOLITAN OPERA COMPANY”\n'+
+            '• VII Concorso Lirico Internazionale "Giovan Battista Rubini"- Finalist \n'+
+            '• 3rd VINCERÒ Opera World Competition- 3° PREMIO / PREMIO "CRITICA" \n'+
+            '• 2023 Bologna International Voice Competition-5° PREMIO-ENCOURAGEMENT AWARD...',
+        'about.bio2': 'In 2025 he entered the Staatliche Hochschule für Musik und Darstellende Kunst Stuttgart to study（Gesang-Oper with Diana Haller).\n' +
+            'From 2023, he has been studying in Europe under Prof. Renate Faltin (Hochschule für Musik Hanns Eisler), Prof. Cheryl Studer (Hochschule für Musik Würzburg), Mr. Klaus Sallmann(Staatsoper Berlin),Mr. Uwe Griem, and Mr. Felice Venanzoni (Oper Frankfurt).\n' +
+            '2020-2025, he study in Shanghai Conservatory of Music（Vocal and Opera with Prof.Heng Shi).\n' +
+            '2025.09,He is a member of Waiblingen international Opernwerkstatt (Germany) and an opera scholarship winner.In the meantime, he will study with Thomas Hampsen and Melanie Diener and give concerts with Württembergischen Philharmonie Reutlingen.\n',
+        'about.bio3': '2023.05, He held a concert of "Resplendent Pearl" Baroque Music at the Opera House of the Shanghai Conservatory of Music. 2023.06，He performed "Baroque Chamber Music Concert" with the Chamber Orchestra of Shanghai Conservatory of Music. And served as the lead singer and chorus of the alto part of the Purcell opera "The Fairy Queen".2023.06, He performed Gouno‘ opera “Romeo et Juliette” and played “Stepheno” in Shanghai. 2023.11, He attended the “German and Russian Master Concert-Night of Art songs” held at the ShangYin Opera House.\n'+
+            'He began to study vocal music in 2016 and tried to learn both tenor and baritone in a period of time. In 2018, he met Italian soprano Francesca Bruni and Shanghai Conservatory of Music Bass- Baritone Pro.Heng Shi, transitionto study Countertenor.\n' +
+            'Since 2019, he has become a resident actor of the French "Festival International d\\\'Art Lyrique d\\\'Argeles" and participated in the production of the "Faust" and "L\\\'Elisir D\\\'Amore". 2019.11, He participated in the C.F. Gounod opera "Faust" directed by Shi Heng, a professor at the Shanghai Conservatory of Music. And played "Siebel" in it.',
         'about.resumeCn': '下载简历',
         'about.resumeEn': 'Download Resume',
-        'about.bio5': '2020-2025, he study in Shanghai Conservatory of Music（Vocal and Opera with Prof.Heng Shi). 2025.09,He is a member of Waiblingen international Opernwerkstatt (Germany) and an opera scholarship winner. In the meantime, he will study with Thomas Hampsen and Melanie Diener and give concerts with Württembergischen Philharmonie Reutlingen. ',
-        'about.bio6': '• 2023.05, He held a concert of "Resplendent Pearl" Baroque Music at the Opera House of the Shanghai Conservatory of Music. ',
-        'about.bio7': '• 2023.06，He performed "Baroque Chamber Music Concert" with the Chamber Orchestra of Shanghai Conservatory of Music. ',
-        'about.bio8': '• 2023.08, He served as the lead singer and chorus of the alto part of the Purcell opera "The Fairy Queen".',
-        'about.bio9': '• 2023.06, He performed Gouno‘ opera “Romeo et Juliette” and played “Stepheno” in Shanghai.',
-        'about.bio10': '• 2023.11, He attended the “German and Russian Master Concert-Night of Art songs” held at the ShangYin Opera House.',
-        'about.bio11': 'He began to study vocal music in 2016 and tried to learn both tenor and baritone in a period of time.',
-        'about.bio12': 'In 2018, he met Italian soprano Francesca Bruni and Shanghai Conservatory of Music Bass- Baritone Pro.Heng Shi, transition to study Countertenor. ',
-        'about.bio13': 'Since 2019, he has become a resident actor of the French "Festival International d\'Art Lyrique d\'Argeles" and participated in the production of the "Faust" and "L\'Elisir D\'Amore". ',
-        'about.bio14': '2019.11, He participated in the C.F. Gounod opera "Faust" directed by Shi Heng, a professor at the Shanghai Conservatory of Music. And play "Siebel" ',
         'features.title': 'Gallery',
-        'features.item1.title': 'Music Creation',
-        'features.item1.desc': 'Original music works blending classical and modern elements',
-        'features.item2.title': 'Stage Performance',
-        'features.item2.desc': 'Passionate and creative live performances',
-        'features.item3.title': 'Cultural Exploration',
-        'features.item3.desc': 'Artistic exchanges and explorations across different cultures',
+        'features.item1.title': 'Personal image',
+        'features.item2.title': 'Performance record',
         'media.title': 'Media Center',
         'media.description': 'Here are my latest performance videos and media content',
         'media.featured': 'Featured Video',
@@ -199,7 +197,15 @@ const translations = {
         'contact.form.name': 'Name',
         'contact.form.email': 'Email',
         'contact.form.message': 'Message',
-        'contact.form.submit': 'Submit'
+        'contact.form.submit': 'Submit',
+        'gallery.personal.title': 'Personal image',
+        'gallery.personal.caption1': 'Artistic Portrait',
+        'gallery.personal.caption2': 'Competition Photo',
+        'gallery.personal.caption3': 'Role Portrait',
+        'gallery.performance.title': 'Performance record',
+        'gallery.performance.caption1': 'Vincerò World Opera Competition',
+        'gallery.performance.caption2': 'Romeo et Juliette - Shanghai',
+        'gallery.performance.caption3': 'Concert Performance'
     },
     'de': {
         'nav.home': 'Startseite',
@@ -211,32 +217,26 @@ const translations = {
         'hero.subtitle': 'Countertenor',
         'hero.button': 'Mehr erfahren',
         'about.subtitle': 'Über mich',
-        'about.bio1': 'WenBo Shuai wurde von europäischen Musikkritikern als „eine Stimme voller dramatischer Spannung“ beschrieben.',
-        'about.bio2': 'Er erhielt Auszeichnungen bei mehreren internationalen Wettbewerben, darunter: ',
-         'about.bio3': '• 42. Daegu International Vocal Music Competition – Finalist / Sonderpreis „Metropolitan Opera Company“ \n' +
-        '• VII Concorso Lirico Internazionale „Giovan Battista Rubini“ – Finalist\n' +
-        '• 2023 VINCERÒ Opera World Competition – 3. Preis / Kritikerpreis \n' +
-        '• 2023 Bologna International Voice Competition – 5. Preis usw… ',
-        'about.bio4': 'Im Jahr 2025 Studiere er an der Staatlichen Hochschule für Musik und Darstellende Kunst Stuttgart im Studiengang Gesang – Oper(mit Diana Haller). Ab 2023，er studierte in Europa bei Prof. Renate Faltin (Hochschule für Musik Hanns Eisler Berlin), Prof. Cheryl Studer (Hochschule für Musik Würzburg), Herr.Klaus Sallmann (Staatsoper Berlin), Herr.Uwe Griem und Herr.Felice Venanzoni (Oper Frankfurt). ',
+        'about.bio1': 'WenBo Shuai wurde von europäischen Musikkritikern als „eine Stimme voller dramatischer Spannung“ beschrieben.\n' + 
+            'Er erhielt Auszeichnungen bei mehreren internationalen Wettbewerben, darunter:\n ' +
+            '• 42. Daegu International Vocal Music Competition - Finalist / Sonderpreis „Metropolitan Opera Company“\n'+
+            '• VII Concorso Lirico Internazionale „Giovan Battista Rubini“ - Finalist\n'+
+            '• 2023 VINCERÒ Opera World Competition - 3. Preis / Kritikerpreis \n'+
+            '• 2023 Bologna International Voice Competition - 5. Preis usw...',
+        'about.bio2': 'Im Jahr 2025 Studiere er an der Staatlichen Hochschule für Musik und Darstellende Kunst Stuttgart im Studiengang Gesang - Oper (mit Diana Haller).\n' +
+            'Ab 2023, er studierte in Europa bei Prof. Renate Faltin (Hochschule für Musik Hanns Eisler Berlin), Prof. Cheryl Studer (Hochschule für Musik Würzburg), Herr.Klaus Sallmann (Staatsoper Berlin), Herr.Uwe Griem und Herr.Felice Venanzoni (Oper Frankfurt).\n' +
+            'Von 2020 bis 2025 studierte er Gesang und Oper an der Shanghai Conservatory of Music (mit Prof.Heng Shi).\n' +
+            'Seit September 2025 ist er Mitglied der Internationalen Opernwerkstatt Waiblingen (Deutschland) und Stipendiat im Bereich Oper. Im Rahmen dessen arbeitet er mit Thomas Hampson und Melanie Diener zusammen und konzertiert mit der Württembergischen Philharmonie Reutlingen.\n',
+        'about.bio3': 'Im Mai 2023 gab er ein Barockkonzert mit dem Titel „Resplendent Pearl“ im Opernhaus des Shanghai Conservatory of Music.\n' +
+            'Im Juni 2023 trat er mit dem Kammerorchester des Konservatoriums im Konzert „Barocke Kammermusik“ auf und übernahm sowohl die Hauptrolle als auch den Alt-Part im Chor der Oper „The Fairy Queen“ von Henry Purcell. Ebenfalls im Juni 2023 sang er in Charles Gounods Oper „Roméo et Juliette“ in Shanghai die Rolle des Stéphano. Im November 2023 wirkte er beim Konzert „Deutscher und Russischer Meisterabend – Nacht der Kunstlieder“ im Shangyin Opera House mit.\n' +
+            'Seit 2019 ist er festes Ensemblemitglied des französischen Festival International d’Art Lyrique d’Argelès und wirkte dort u. a. in den Produktionen der Opern „Faust“ und „L’elisir d’amore“ mit. \n' +
+            'Im November 2019 sang er die Rolle des Siebel in Charles Gounods Oper „Faust“ unter der Regie von Prof. Heng Shi am Shanghai Conservatory of Music. \n' +
+            'Sein Gesangsstudium begann im Jahr 2016. Anfangs studierte er sowohl Tenor- als auch Bariton-Partien.Im Jahr 2018 begegnete er der italienischen Sopranistin Francesca Bruni sowie dem Bassbariton Prof. Heng Shi vom Shanghai Conservatory of Music und wechselte schließlich zum Fach Countertenor.',
         'about.resumeCn': '下载简历',
         'about.resumeEn': 'Download Resume',
-        'about.bio5': 'Von 2020 bis 2025 studierte er Gesang und Oper an der Shanghai Conservatory of Music (mit Prof.Heng Shi) Seit September 2025 ist er Mitglied der Internationalen Opernwerkstatt Waiblingen (Deutschland) und Stipendiat im Bereich Oper. Im Rahmen dessen arbeitet er mit Thomas Hampson und Melanie Diener zusammen und konzertiert mit der Württembergischen Philharmonie Reutlingen.',
-        'about.bio6': 'Im Mai 2023 gab er ein Barockkonzert mit dem Titel „Resplendent Pearl“ im Opernhaus des Shanghai Conservatory of Music. ',
-        'about.bio7': 'Im Juni 2023 trat er mit dem Kammerorchester des Konservatoriums im Konzert „Barocke Kammermusik“',
-        'about.bio8': 'auf und übernahm sowohl die Hauptrolle als auch den Alt-Part im Chor der Oper „The Fairy Queen“ von Henry Purcell. ',
-        'about.bio9': 'Ebenfalls im Juni 2023 sang er in Charles Gounods Oper „Roméo et Juliette“ in Shanghai die Rolle des Stéphano.',
-        'about.bio10': 'Im November 2023 wirkte er beim Konzert „Deutscher und Russischer Meisterabend – Nacht der Kunstlieder“ im Shangyin Opera House mit.',
-        'about.bio11': 'Sein Gesangsstudium begann im Jahr 2016. Anfangs studierte er sowohl Tenor- als auch Bariton-Partien.',
-        'about.bio12': 'Im Jahr 2018 begegnete er der italienischen Sopranistin Francesca Bruni sowie dem Bassbariton Prof. Heng Shi vom Shanghai Conservatory of Music und wechselte schließlich zum Fach Countertenor.',
-        'about.bio13': 'Seit 2019 ist er festes Ensemblemitglied des französischen Festival International d’Art Lyrique d’Argelès und wirkte dort u. a. in den Produktionen der Opern „Faust“ und „L’elisir d’amore“ mit. ',
-        'about.bio14': 'Im November 2019 sang er die Rolle des Siebel in Charles Gounods Oper „Faust“ unter der Regie von Prof. Heng Shi am Shanghai Conservatory of Music.',
         'features.title': 'Galerie',
-        'features.item1.title': 'Musikschaffung',
-        'features.item1.desc': 'Originale Musikwerke, die klassische und moderne Elemente verbinden',
-        'features.item2.title': 'Bühnenaufführung',
-        'features.item2.desc': 'Leidenschaftliche und kreative Live-Aufführungen',
-        'features.item3.title': 'Kulturelle Exploration',
-        'features.item3.desc': 'Künstlerischer Austausch und Erforschung verschiedener Kulturen',
+        'features.item1.title': 'Persönliches Bild',
+        'features.item2.title': 'Aufführung',
         'media.title': 'Medienzentrum',
         'media.description': 'Hier sind meine neuesten Auftrittsvideos und Medieninhalte',
         'media.featured': 'Ausgewähltes Video',
@@ -301,7 +301,15 @@ const translations = {
         'contact.form.name': 'Name',
         'contact.form.email': 'E-Mail',
         'contact.form.message': 'Nachricht',
-        'contact.form.submit': 'Senden'
+        'contact.form.submit': 'Senden',
+        'gallery.personal.title': 'Persönliches Bild',
+        'gallery.personal.caption1': 'Künstlerisches Portrait',
+        'gallery.personal.caption2': 'Wettbewerb Foto',
+        'gallery.personal.caption3': 'Rollenportrait',
+        'gallery.performance.title': 'Aufführung',
+        'gallery.performance.caption1': 'VINCERÒ Welt-Oper-Wettbewerb',
+        'gallery.performance.caption2': 'Romeo et Juliette - Shanghai',
+        'gallery.performance.caption3': 'Konzertaufführung'
     }
 };
 

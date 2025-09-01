@@ -217,7 +217,7 @@ body {
 }
 
 /* 英雄区域 */
- .hero {
+.hero {
     background-color: var(--light-color);
     height: 100vh;
     display: flex;
@@ -228,69 +228,71 @@ body {
 }
 
 /* 英雄区域容器 - 左侧文字，右侧轮播 */
- .hero-container {
+.hero-container {
     display: flex;
     align-items: center;
-    justify-content: center; /* 修改为center使整个内容组居中 */
+    justify-content: center;
     width: 100%;
     height: 100%;
-    padding: 0.5rem 0; /* 适当缩小top和bottom内边距 */
+    padding: 0.5rem 0;
 }
 
 /* 新添加的内容组，用于包裹文字和图片 */
- .hero-content-group {
+.hero-content-group {
     display: flex;
     align-items: center;
     width: 100%;
-    max-width: 850px; /* 保持紧凑的最大宽度 */
-    gap: 80px; /* 进一步增大img和div之间的水平间距，解决过于紧凑的问题 */
-    transform: scale(1.2); /* 将div元素等比放大1.2倍 */
-    transform-origin: center; /* 确保元素从中心开始缩放 */
+    max-width: 850px;
+    gap: 40px; /* 减小间距，避免在小屏幕上覆盖 */
+    transform: translate(10%, -5%) scale(1.2);
+    transform-origin: center;
+    flex-wrap: wrap;
 }
 
 /* 左侧文字内容 */
- .hero-text {
+.hero-text {
     flex: 1;
+    min-width: 300px;
     max-width: 50%;
-    padding-right: 0; /* 移除右侧padding */
-    text-align: left; /* 修改为left使文本内容左对齐 */
-    padding-top: 1rem; /* 增加顶部padding以帮助h1向上移动 */
+    padding-right: 0;
+    text-align: left;
+    padding-top: 1rem;
 }
 
- .hero-title {
-    font-size: 5rem; /* 加大字号 */
-    margin-bottom: 0.5rem; /* 减小底部margin使h1向上移动 */
-    margin-top: -0.5rem; /* 增加负的顶部margin使h1进一步向上移动 */
+/* 调整主副标题字体大小，使它们更加对称平衡 */
+.hero-title {
+    font-size: 3.5rem; /* 调整为更合适的大小 */
+    margin-bottom: 0.5rem;
+    margin-top: -0.5rem;
     color: var(--dark-color);
     line-height: 1.2;
-    display: inline-block; /* 使元素宽度适应内容 */
-    width: auto; /* 自动宽度 */
-    max-width: 100%; /* 最大宽度不超过父元素 */
-    overflow: visible; /* 允许内容溢出（对于超大字体） */
-    white-space: nowrap; /* 防止文本换行 */
-    transform-origin: left center; /* 确保变换基于左侧中心点 */
-    font-weight: 900; /* 适当加粗字体 */
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+    overflow: visible;
+    white-space: nowrap;
+    transform-origin: left center;
+    font-weight: 900;
 }
 
- .hero-subtitle {
-    font-size: 4.5rem; /* 略微缩小字号 */
+.hero-subtitle {
+    font-size: 2.5rem; /* 调整为更合适的大小，与主标题保持更好的比例 */
     margin-bottom: 1rem;
     font-weight: 300;
     color: var(--dark-color);
     font-style: italic;
-    /* 使用优雅的花体字体组合 */
     font-family: 'Edwardian Script ITC', 'French Script MT', 'Lucida Handwriting', 'Goudy Old Style', 'Palatino Linotype', serif;
 }
 
 /* 右侧图片轮播 */
- .hero-slider {
-    flex: 0.8; /* 调整轮播在flex布局中的占比，使其更小 */
-    max-width: 35%; /* 调整最大宽度，进一步缩小展示面积 */
+.hero-slider {
+    flex: 0.8;
+    min-width: 250px;
+    max-width: 35%;
     position: relative;
     overflow: hidden;
     border-radius: 8px;
     box-shadow: var(--shadow);
-    /* 使用aspect-ratio设置竖置4:3比例 */
     aspect-ratio: 3/4;
 }
 
@@ -377,7 +379,23 @@ body {
     border-color: var(--primary-color);
 }
 
-/* 响应式设计 */
+/* 响应式设计 - 大屏幕调整 */
+@media (max-width: 1200px) {
+    .hero-content-group {
+        gap: 30px;
+        transform: scale(1.05);
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 2.2rem;
+    }
+}
+
+/* 响应式设计 - 中等屏幕调整 */
 @media (max-width: 992px) {
     .hero-container {
         justify-content: center;
@@ -387,6 +405,8 @@ body {
         flex-direction: column;
         justify-content: center;
         text-align: center;
+        gap: 20px;
+        transform: scale(1);
     }
     
     .hero-text {
@@ -397,34 +417,54 @@ body {
     }
     
     .hero-slider {
-        max-width: 100%;
-        height: auto; /* 改为auto，让aspect-ratio生效 */
-        max-height: 60vh; /* 调整最大高度，适应竖置比例 */
-        aspect-ratio: 3/4; /* 保持竖置4:3比例 */
+        max-width: 70%;
+        height: auto;
+        max-height: 60vh;
+        aspect-ratio: 3/4;
     }
     
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
+        text-align: center;
+        white-space: normal;
     }
     
     .hero-subtitle {
-        font-size: 1.2rem;
+        font-size: 2rem;
+        text-align: center;
     }
 }
 
+/* 响应式设计 - 小屏幕调整 */
 @media (max-width: 768px) {
     .hero-slider {
         height: 40vh;
+        max-width: 90%;
     }
     
     .hero-title {
-        font-size: 2rem;
+        font-size: 2.2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.6rem;
     }
     
     .slider-btn {
         width: 40px;
         height: 40px;
         font-size: 1.5rem;
+    }
+}
+
+/* 响应式设计 - 超小屏幕调整 */
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.4rem;
     }
 }
 
@@ -1039,10 +1079,6 @@ body {
 
 /* 响应式设计 */
  @media (max-width: 992px) {
-    .hero-title {
-        font-size: 2.5rem;
-    }
-
     .nav-links li {
         margin-left: 1rem;
     }
@@ -1059,14 +1095,6 @@ body {
 
     .nav-links {
         margin-bottom: 1rem;
-    }
-
-    .hero-title {
-        font-size: 2rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.25rem;
     }
 
     .schedule-header, .schedule-item {
@@ -1702,4 +1730,13 @@ p[data-i18n="about.bio3"] {
     .social-links a {
         margin: 0 0.5rem;
     }
+}
+
+/* 图片注释样式 */
+.image-caption {
+font-size: 0.8rem;
+color: #666;
+text-align: center;
+margin-top: 5px;
+font-style: italic;
 }
