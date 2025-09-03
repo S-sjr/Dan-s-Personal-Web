@@ -138,9 +138,21 @@ body {
     text-decoration: none;
 }
 
+ /* 汉堡菜单按钮 - 默认隐藏 */
+ .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    z-index: 2000;
+}
+
  .nav-links {
     display: flex;
     list-style: none;
+    transition: all 0.3s ease;
 }
 
  .nav-links li {
@@ -216,22 +228,23 @@ body {
     box-shadow: none;
 }
 
-/* 英雄区域 */
+/* 英雄区域 - 外层容器，设置整体垂直居中 */
 .hero {
     background-color: var(--light-color);
     height: 100vh;
     display: flex;
-    align-items: center;
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
     color: var(--dark-color);
     position: relative;
     overflow: hidden;
 }
 
-/* 英雄区域容器 - 左侧文字，右侧轮播 */
+/* 英雄区域容器 - 中层容器，保持垂直居中 */
 .hero-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
     width: 100%;
     height: 100%;
     padding: 0.5rem 0;
@@ -240,7 +253,7 @@ body {
 /* 新添加的内容组，用于包裹文字和图片 */
 .hero-content-group {
     display: flex;
-    align-items: center;
+    align-items: center; /* 改为center，确保子元素垂直居中 */
     width: 100%;
     max-width: 850px;
     gap: 40px; /* 减小间距，避免在小屏幕上覆盖 */
@@ -256,11 +269,13 @@ body {
     max-width: 50%;
     padding-right: 0;
     text-align: left;
-    padding-top: 2rem; /* 增加顶部内边距以增加div高度 */
-    padding-bottom: 1rem;
+    padding-top: 0;
+    padding-bottom: 0;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem; /* 增加元素间距 */
+    gap: 2.5rem; /* 增加元素间距，从1.5rem改为2.5rem */
+    height: 100%;
+    justify-content: center; /* 垂直居中内容 */
 }
 
 /* 修复hero区域按钮外框变形问题并调整按钮位置 */
@@ -270,14 +285,13 @@ body {
     align-self: flex-start;
     border: 1px solid transparent;
     transition: all 0.3s ease;
-    margin-top: auto; /* 将按钮推到底部，使其底部与轮播图底部对齐 */
 }
 
 /* 调整主副标题字体大小，使它们更加对称平衡 */
 .hero-title {
     font-size: 3.5rem; /* 调整为更合适的大小 */
     margin-bottom: 0; /* 上下外边距调整为0 */
-    margin-top: -7rem; /* 增加负的顶部外边距值，使h1向上移动更多 */
+    margin-top: 0; /* 移除负的顶部外边距，使hero-text高度自然增长 */
     padding-top: 0; /* 上下内边距调整为0 */
     padding-bottom: 0;
     color: var(--dark-color);
@@ -420,11 +434,13 @@ body {
 @media (max-width: 992px) {
     .hero-container {
         justify-content: center;
+        align-items: center;
     }
     
     .hero-content-group {
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         text-align: center;
         gap: 20px;
         transform: scale(1);
@@ -458,6 +474,16 @@ body {
 
 /* 响应式设计 - 小屏幕调整 */
 @media (max-width: 768px) {
+    .hero-container {
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .hero-content-group {
+        justify-content: center;
+        align-items: center;
+    }
+    
     .hero-slider {
         height: 40vh;
         max-width: 90%;
@@ -480,6 +506,16 @@ body {
 
 /* 响应式设计 - 超小屏幕调整 */
 @media (max-width: 576px) {
+    .hero-container {
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .hero-content-group {
+        justify-content: center;
+        align-items: center;
+    }
+    
     .hero-title {
         font-size: 1.8rem;
     }
@@ -1142,29 +1178,89 @@ body {
 }
 
  @media (max-width: 576px) {
+    /* 超小屏幕优化 */
     h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     h2 {
         font-size: 1.5rem;
     }
 
-    .hero {
-        height: 70vh;
+    /* 导航栏优化 */
+    .navbar {
+        padding: 0.75rem 0;
     }
-
+    
+    .logo {
+        font-size: 1.25rem;
+    }
+    
+    .menu-toggle {
+        top: 0.75rem;
+        font-size: 1.25rem;
+    }
+    
+    /* 英雄区域优化 */
+    .hero {
+        padding: 3rem 0;
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    .hero-content-group {
+        gap: 20px;
+    }
+    
+    .hero-text {
+        gap: 1rem;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem;
+        margin-top: 0;
+        line-height: 1.2;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.4rem;
+    }
+    
+    .hero-slider {
+        max-width: 100%;
+        min-height: 30vh;
+        margin-top: 1rem;
+    }
+    
+    /* 按钮优化 */
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.875rem;
+    }
+    
+    /* 页脚优化 */
     .footer .container {
         flex-direction: column;
         text-align: center;
+        padding: 0 15px;
     }
-
+    
+    .footer p {
+        font-size: 0.875rem;
+    }
+    
     .social-links {
         margin-top: 1rem;
+        gap: 1rem;
     }
-
+    
     .social-links a {
-        margin: 0 0.5rem;
+        margin: 0;
+    }
+    
+    .social-links img {
+        width: 20px !important;
+        height: 20px !important;
     }
 }
 
@@ -1680,47 +1776,142 @@ p[data-i18n="about.bio3"] {
     .nav-links li {
         margin-left: 1rem;
     }
+    
+    /* 导航栏调整 */
+    .navbar {
+        padding: 1rem 0;
+    }
+    
+    /* 英雄区域在中等屏幕的优化 */
+    .hero-content-group {
+        transform: translate(0, 0) scale(1);
+    }
+    
+    .hero-text {
+        padding-top: 0;
+    }
+    
+    .hero-title {
+        margin-top: 0;
+        font-size: 2.8rem;
+        text-align: center;
+    }
 }
 
  @media (max-width: 768px) {
+    /* 汉堡菜单导航 - 小屏幕优化 */
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+    
     .navbar .container {
         flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        padding: 0 15px;
     }
-
+    
     .logo {
-        margin-bottom: 1rem;
+        margin-bottom: 0;
     }
-
+    
+    /* 导航菜单默认隐藏，点击汉堡菜单显示 */
     .nav-links {
-        margin-bottom: 1rem;
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin: 1rem 0;
+        text-align: center;
     }
-
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links li {
+        margin: 0.5rem 0;
+        width: 100%;
+    }
+    
+    .nav-links a {
+        display: block;
+        padding: 0.5rem 0;
+    }
+    
+    /* 语言切换在小屏幕上居中显示 */
+    .language-switch {
+        margin: 0.5rem auto;
+    }
+    
+    /* 英雄区域小屏幕优化 */
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 4rem 0;
+    }
+    
+    .hero-container {
+        align-items: flex-start;
+    }
+    
+    .hero-content-group {
+        flex-direction: column;
+        transform: translate(0, 0) scale(1);
+        text-align: center;
+    }
+    
+    .hero-text {
+        max-width: 100%;
+        padding-top: 0;
+        text-align: center;
+    }
+    
     .hero-title {
-        font-size: 2rem;
+        font-size: 2.2rem;
+        margin-top: 0;
+        white-space: normal;
+        text-align: center;
     }
-
+    
     .hero-subtitle {
-        font-size: 1.25rem;
+        font-size: 1.6rem;
+        text-align: center;
     }
-
+    
+    .hero-slider {
+        max-width: 90%;
+        height: auto;
+        min-height: 40vh;
+        margin-top: 2rem;
+    }
+    
+    .hero-text .btn {
+        align-self: center;
+        margin-top: 1rem;
+    }
+    
+    /* 其他区域响应式优化 */
     .schedule-header, .schedule-item {
         flex-direction: column;
     }
-
+    
     .date-col, .event-col, .location-col, .ticket-col {
         width: 100%;
         padding: 1rem;
     }
-
+    
     .subscribe-form {
         flex-direction: column;
     }
-
+    
     .subscribe-form input {
         margin-bottom: 1rem;
         border-radius: 2px;
     }
-
+    
     .subscribe-form .btn {
         border-radius: 2px;
     }
