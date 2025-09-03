@@ -256,16 +256,32 @@ body {
     max-width: 50%;
     padding-right: 0;
     text-align: left;
-    padding-top: 1rem;
+    padding-top: 2rem; /* 增加顶部内边距以增加div高度 */
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* 增加元素间距 */
+}
+
+/* 修复hero区域按钮外框变形问题并调整按钮位置 */
+.hero-text .btn {
+    display: inline-block;
+    width: auto;
+    align-self: flex-start;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    margin-top: auto; /* 将按钮推到底部，使其底部与轮播图底部对齐 */
 }
 
 /* 调整主副标题字体大小，使它们更加对称平衡 */
 .hero-title {
     font-size: 3.5rem; /* 调整为更合适的大小 */
-    margin-bottom: 0.5rem;
-    margin-top: -0.5rem;
+    margin-bottom: 0; /* 上下外边距调整为0 */
+    margin-top: -7rem; /* 增加负的顶部外边距值，使h1向上移动更多 */
+    padding-top: 0; /* 上下内边距调整为0 */
+    padding-bottom: 0;
     color: var(--dark-color);
-    line-height: 1.2;
+    line-height: 1; /* 设置行高与文字高度一致 */
     display: inline-block;
     width: auto;
     max-width: 100%;
@@ -273,6 +289,11 @@ body {
     white-space: nowrap;
     transform-origin: left center;
     font-weight: 900;
+}
+
+/* 英文标题特定样式 - 增大字号 */
+.hero-title[data-i18n="hero.title"] {
+    font-size: 4rem; /* 英文标题更大的字号 */
 }
 
 .hero-subtitle {

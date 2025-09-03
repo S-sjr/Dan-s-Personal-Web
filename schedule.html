@@ -35,69 +35,274 @@
             <h1 class="page-title" data-i18n="schedule.title">演出日程</h1>
             <p class="page-description" data-i18n="schedule.description">查看我的演出和活动安排</p>
 
+            <style>
+                /* 确保所有海报框大小统一，调整比例以正常显示图片 */
+                .about-content {
+                    display: flex;
+                    margin-bottom: 30px;
+                    align-items: center;
+                    flex-wrap: wrap;
+                }
+                
+                .about-content:nth-child(odd) {
+                    flex-direction: row;
+                }
+                
+                .about-content:nth-child(even) {
+                    flex-direction: row-reverse;
+                }
+                
+                .about-image {
+                    flex: 0 0 300px;
+                    height: 225px; /* 调整比例为4:3，更适合大多数图片显示 */
+                    overflow: hidden;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #f5f5f5;
+                }
+                
+                .about-image img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain; /* 使用contain而不是cover，确保整个图片都能显示 */
+                }
+                
+                .about-text {
+                    flex: 1;
+                    padding: 20px;
+                    min-width: 300px;
+                }
+                
+                .btn-disabled {
+                    opacity: 0.6;
+                    cursor: not-allowed;
+                    pointer-events: none;
+                }
+                
+                @media (max-width: 768px) {
+                    .about-content {
+                        flex-direction: column !important;
+                    }
+                    
+                    .about-image {
+                        width: 100%;
+                        max-width: 400px;
+                        height: auto;
+                    }
+                    
+                    .about-image img {
+                        max-height: 300px;
+                    }
+                }
+            </style>
+
             <!-- 演出日程 - 使用about-content样式 -->
-            <!-- 古典音乐会 -->
+            <!-- 第75届维奥蒂音乐比赛 -->
             <div class="about-content">
                 <div class="about-image">
-                    <img src="img/event1.jpg" alt="古典音乐会">
+                    <img src="img/Calendar/75th Concorso di Musica Viotti.png" alt="第75届维奥蒂音乐比赛">
                 </div>
                 <div class="about-text">
-                    <h3 data-i18n="schedule.event1">古典音乐会</h3>
-                    <p><strong data-i18n="schedule.dateHeader">日期:</strong> <span data-i18n="schedule.event1.date">2023年10月15日</span></p>
-                    <p><strong data-i18n="schedule.locationHeader">地点:</strong> <span data-i18n="schedule.location1">柏林音乐厅</span></p>
-                    <a href="https://www.eventbrite.com/event1-details" target="_blank" class="btn-sm" data-i18n="schedule.detailsButton">活动详情</a>
+                    <h3>75th Concorso di Musica Viotti</h3>
+                    <p><strong>Date:</strong> <span>Oct 11-18, 2025</span></p>
+                    <p><strong>Location:</strong> <span>Vercelli, Italy</span></p>
+                    <a href="https://www.concorsoviotti.it/en/about_us_home/" class="btn-sm" target="_blank" data-i18n="schedule.detailsButton">活动详情</a>
                 </div>
             </div>
             
-            <!-- 现代舞表演 -->
+            <!-- 第10届雷娜塔·特巴尔迪国际声乐比赛（巴洛克组） -->
             <div class="about-content">
                 <div class="about-text">
-                    <h3 data-i18n="schedule.event2">现代舞表演</h3>
-                    <p><strong data-i18n="schedule.dateHeader">日期:</strong> <span data-i18n="schedule.event2.date">2024年11月2日</span></p>
-                    <p><strong data-i18n="schedule.locationHeader">地点:</strong> <span data-i18n="schedule.location2">巴黎歌剧院</span></p>
-                    <a href="https://www.eventbrite.com/event2-details" target="_blank" class="btn-sm" data-i18n="schedule.detailsButton">活动详情</a>
+                    <h3>10th Renata Tebaldi International Voice Competition（Baroque Section）</h3>
+                    <p><strong>Date:</strong> <span>Sep 23-27, 2025</span></p>
+                    <p><strong>Location:</strong> <span>San Marino, Italy</span></p>
+                    <a href="https://www.fondazionerenatatebaldi.org" class="btn-sm" target="_blank" data-i18n="schedule.detailsButton">活动详情</a>
                 </div>
                 <div class="about-image">
-                    <img src="img/event2.jpg" alt="现代舞表演">
+                    <img src="img/Calendar/10th Renata Tebaldi International Voice Competition（Baroque Section）.png" alt="第10届雷娜塔·特巴尔迪国际声乐比赛（巴洛克组）">
                 </div>
             </div>
             
-            <!-- 艺术展览开幕式 -->
+            <!-- 第6届国际歌剧工作坊魏布林根结业音乐会 -->
             <div class="about-content">
                 <div class="about-image">
-                    <img src="img/event3.jpg" alt="艺术展览开幕式">
+                    <img src="img/Calendar/AbschlussKonzert 6 International Opernwerkstatt Waiblingen.png" alt="第6届国际歌剧工作坊魏布林根结业音乐会">
                 </div>
                 <div class="about-text">
-                    <h3 data-i18n="schedule.event3">艺术展览开幕式</h3>
-                    <p><strong data-i18n="schedule.dateHeader">日期:</strong> <span data-i18n="schedule.event3.date">2025年11月20日</span></p>
-                    <p><strong data-i18n="schedule.locationHeader">地点:</strong> <span data-i18n="schedule.location3">伦敦国家美术馆</span></p>
-                    <a href="https://www.eventbrite.com/event3-details" target="_blank" class="btn-sm" data-i18n="schedule.detailsButton">活动详情</a>
+                    <h3>AbschlussKonzert 6 International Opernwerkstatt Waiblingen</h3>
+                    <p><strong>Date:</strong> <span>Sep 20, 2025</span></p>
+                    <p><strong>Location:</strong> <span>Waiblingen, Germany</span></p>
+                    <a href="https://www.internationale-opernwerkstatt-waiblingen.de/willkommen" class="btn-sm" target="_blank" data-i18n="schedule.detailsButton">活动详情</a>
                 </div>
             </div>
             
-            <!-- 新年音乐会 -->
+            <!-- 第2届卡斯凯什歌剧国际声乐比赛 -->
             <div class="about-content">
                 <div class="about-text">
-                    <h3 data-i18n="schedule.event4">新年音乐会</h3>
-                    <p><strong data-i18n="schedule.dateHeader">日期:</strong> <span data-i18n="schedule.event4.date">2024年12月5日</span></p>
-                    <p><strong data-i18n="schedule.locationHeader">地点:</strong> <span data-i18n="schedule.location4">维也纳金色大厅</span></p>
-                    <a href="https://www.eventbrite.com/event4-details" target="_blank" class="btn-sm" data-i18n="schedule.detailsButton">活动详情</a>
+                    <h3>2nd Cascais Opera International Vocal Competition</h3>
+                    <p><strong>Date:</strong> <span>Apr 23-May 4, 2025</span></p>
+                    <p><strong>Location:</strong> <span>Cascais, Portugal</span></p>
+                    <a href="https://cascaisopera.com" class="btn-sm" target="_blank" data-i18n="schedule.detailsButton">活动详情</a>
                 </div>
                 <div class="about-image">
-                    <img src="img/event4.jpg" alt="新年音乐会">
+                    <img src="img/Calendar/2nd Cascais Opera International Vocal Competition.png" alt="第2届卡斯凯什歌剧国际声乐比赛">
                 </div>
             </div>
             
-            <!-- 亚洲巡演 - 北京 -->
+            <!-- 法里内利比赛 -->
             <div class="about-content">
                 <div class="about-image">
-                    <img src="img/event5.jpg" alt="亚洲巡演 - 北京">
+                    <img src="img/Calendar/Farinelli Wettbewerb.png" alt="法里内利比赛">
                 </div>
                 <div class="about-text">
-                    <h3 data-i18n="schedule.event5">亚洲巡演 - 北京</h3>
-                    <p><strong data-i18n="schedule.dateHeader">日期:</strong> <span data-i18n="schedule.event5.date">2026年1月18日</span></p>
-                    <p><strong data-i18n="schedule.locationHeader">地点:</strong> <span data-i18n="schedule.location5">北京国家大剧院</span></p>
-                    <a href="https://www.eventbrite.com/event5-details" target="_blank" class="btn-sm" data-i18n="schedule.detailsButton">活动详情</a>
+                    <h3>Farinelli Wettbewerb</h3>
+                    <p><strong>Date:</strong> <span>Feb 27-Mar 2, 2025</span></p>
+                    <p><strong>Location:</strong> <span>Karlsruhe, Germany</span></p>
+                    <a href="https://www.staatstheater-karlsruhe.de/programm/oper/farinelli-wettbewerb/" class="btn-sm" target="_blank" data-i18n="schedule.detailsButton">活动详情</a>
+                </div>
+            </div>
+            
+            <!-- 第62届维尼亚斯男高音比赛 -->
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>62nd Tenor Viñas Concurs</h3>
+                    <p><strong>Date:</strong> <span>Jan 18-26, 2025</span></p>
+                    <p><strong>Location:</strong> <span>Barcelona, Spain</span></p>
+                    <a href="https://www.tenorvinas.com/en" class="btn-sm" target="_blank" data-i18n="schedule.detailsButton">活动详情</a>
+                </div>
+                <div class="about-image">
+                    <img src="img/Calendar/62nd Tenor Viñas Concurs.png" alt="第62届维尼亚斯男高音比赛">
+                </div>
+            </div>
+            
+            <!-- 大邱国际声乐比赛决赛音乐会 -->
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="img/Calendar/Daegu International Vocal music Competition Finalist Concert.png" alt="大邱国际声乐比赛决赛音乐会">
+                </div>
+                <div class="about-text">
+                    <h3>Daegu International Vocal music Competition Finalist Concert</h3>
+                    <p><strong>Date:</strong> <span>Aug 30, 2024</span></p>
+                    <p><strong>Location:</strong> <span>Daegu, South Korea</span></p>
+                    <a href="https://daegumusic.com" class="btn-sm" target="_blank" data-i18n="schedule.detailsButton">活动详情</a>
+                </div>
+            </div>
+            
+            <!-- 第15届巴洛克歌剧国际声乐比赛《安东尼奥·切斯蒂》 -->
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>15th International Singing Competition for Baroque Opera《Antonio Cesti》</h3>
+                    <p><strong>Date:</strong> <span>Aug 25-30, 2024</span></p>
+                    <p><strong>Location:</strong> <span>Innsbruck, Austria</span></p>
+                    <a href="https://www.altemusik.at/en/cesti" class="btn-sm" target="_blank" data-i18n="schedule.detailsButton">活动详情</a>
+                </div>
+                <div class="about-image">
+                    <img src="img/Calendar/15th International Singing Competition for Baroque Opera《Antonio Cesti》.png" alt="第15届巴洛克歌剧国际声乐比赛《安东尼奥·切斯蒂》">
+                </div>
+            </div>
+            
+            <!-- 威廉·斯坦哈默国际音乐比赛 -->
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="img/Calendar/Wilhelm Stenhammar International Music Competition.png" alt="威廉·斯坦哈默国际音乐比赛">
+                </div>
+                <div class="about-text">
+                    <h3>Wilhelm Stenhammar International Music Competition</h3>
+                    <p><strong>Date:</strong> <span>Jun 7-13, 2024</span></p>
+                    <p><strong>Location:</strong> <span>Norrköping, Sweden</span></p>
+                    <a href="https://www.stenhammarcompetition.se" class="btn-sm" target="_blank" data-i18n="schedule.detailsButton">活动详情</a>
+                </div>
+            </div>
+            
+            <!-- 第3届Vincerò世界声乐比赛决赛音乐会 -->
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>3rd Vincerò World Singing Competition Finalist Concert</h3>
+                    <p><strong>Date:</strong> <span>Dec 11, 2023</span></p>
+                    <p><strong>Location:</strong> <span>Verona, Italy</span></p>
+                    <a href="#" class="btn-sm btn-disabled" data-i18n="schedule.detailsButton">活动详情</a>
+                </div>
+                <div class="about-image">
+                    <img src="img/Calendar/3rd Vincerò World Singing Competition Finalist Concert.png" alt="第3届Vincerò世界声乐比赛决赛音乐会">
+                </div>
+            </div>
+            
+            <!-- 博洛尼亚国际声乐比赛获奖者表演 -->
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="img/Calendar/Bologna International Vocal Competition Winners' Performance.png" alt="博洛尼亚国际声乐比赛获奖者表演">
+                </div>
+                <div class="about-text">
+                    <h3>Bologna International Vocal Competition Winners' Performance</h3>
+                    <p><strong>Date:</strong> <span>Aug 1, 2023</span></p>
+                    <p><strong>Location:</strong> <span>Bologna, Italy</span></p>
+                    <a href="https://bolognavocalcomp.com" class="btn-sm" target="_blank" data-i18n="schedule.detailsButton">活动详情</a>
+                </div>
+            </div>
+            
+            <!-- 古诺歌剧《罗密欧与朱丽叶》（斯特凡） -->
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Gound Opera_Romeo et Juliette (Stephone)</h3>
+                    <p><strong>Date:</strong> <span>Jun 30-Jul 1, 2023</span></p>
+                    <p><strong>Location:</strong> <span>Shanghai, China</span></p>
+                    <a href="#" class="btn-sm btn-disabled" data-i18n="schedule.detailsButton">活动详情</a>
+                </div>
+                <div class="about-image">
+                    <img src="img/Calendar/Gound Opera_Romeo et Juliette (Stephone).png" alt="古诺歌剧《罗密欧与朱丽叶》（斯特凡）">
+                </div>
+            </div>
+            
+            <!-- 上海音乐学院巴洛克室内乐团特别音乐会 -->
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="img/Calendar/Special concert by Baroque Chamber Orchestra of Shanghai Conservatory of Music.png" alt="上海音乐学院巴洛克室内乐团特别音乐会">
+                </div>
+                <div class="about-text">
+                    <h3>Special concert by Baroque Chamber Orchestra of Shanghai Conservatory of Music</h3>
+                    <p><strong>Date:</strong> <span>Jun 12, 2023</span></p>
+                    <p><strong>Location:</strong> <span>Shanghai, China</span></p>
+                    <a href="#" class="btn-sm btn-disabled" data-i18n="schedule.detailsButton">活动详情</a>
+                </div>
+            </div>
+            
+            <!-- 明珠之光-巴洛克作品音乐会 -->
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Bright Pearl-Concert of Works from Baroque Period</h3>
+                    <p><strong>Date:</strong> <span>May 1, 2023</span></p>
+                    <p><strong>Location:</strong> <span>Shanghai, China</span></p>
+                    <a href="#" class="btn-sm btn-disabled" data-i18n="schedule.detailsButton">活动详情</a>
+                </div>
+                <div class="about-image">
+                    <img src="img/Calendar/Bright Pearl-Concert of Works from Baroque Period.png" alt="明珠之光-巴洛克作品音乐会">
+                </div>
+            </div>
+            
+            <!-- 第60届维尼亚斯男高音比赛 -->
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="img/Calendar/60th Tenor Viñas Concurs.png" alt="第60届维尼亚斯男高音比赛">
+                </div>
+                <div class="about-text">
+                    <h3>60th Tenor Viñas Concurs</h3>
+                    <p><strong>Date:</strong> <span>Jan 21-27, 2023</span></p>
+                    <p><strong>Location:</strong> <span>Barcelona, Spain</span></p>
+                    <a href="https://www.tenorvinas.com/en" class="btn-sm" target="_blank" data-i18n="schedule.detailsButton">活动详情</a>
+                </div>
+            </div>
+            
+            <!-- 古诺歌剧《浮士德》（西贝尔） -->
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Gound Opera_Faust (Siebel)</h3>
+                    <p><strong>Date:</strong> <span>Aug 7, 2019</span></p>
+                    <p><strong>Location:</strong> <span>Shanghai, China</span></p>
+                    <a href="#" class="btn-sm btn-disabled" data-i18n="schedule.detailsButton">活动详情</a>
+                </div>
+                <div class="about-image">
+                    <img src="img/Calendar/Gound Opera_Faust (Siebel).png" alt="古诺歌剧《浮士德》（西贝尔）">
                 </div>
             </div>
 
