@@ -24,8 +24,21 @@
         
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
+        }
+        
+        /* 响应式布局调整 */
+        @media (max-width: 1024px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
         }
         
         .gallery-item {
@@ -42,7 +55,7 @@
         
         .gallery-item img {
             width: 100%;
-            height: 250px;
+            height: auto;
             object-fit: cover;
             display: block;
             transition: transform 0.5s ease;
@@ -53,15 +66,43 @@
         }
         
         .gallery-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
+            position: relative;
             background: rgba(0, 0, 0, 0.7);
             color: white;
             padding: 10px;
             text-align: center;
             font-family: 'Lato', sans-serif;
+            font-size: 0.9rem;
+        }
+        
+        /* 保持所有图片在三列网格中统一排列 */
+        .gallery-item {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* 调整图片容器高度和图片显示 */
+        .gallery-item {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            min-height: 250px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
         }
         
         /* 图片查看器样式 */
@@ -153,22 +194,176 @@
             <h1 class="gallery-title" data-i18n="gallery.performance.title">演出记录</h1>
             
             <div class="gallery-grid">
-                <!-- 图片1 -->
+                <!-- Competition 照片 -->
                 <div class="gallery-item">
-                    <img src="img/aboutpage/2.jpg" alt="演出照片1" class="gallery-image">
-                    <div class="gallery-caption" data-i18n="gallery.performance.caption1">照片详情</div>
+                    <img src="img/Photo/competition/Bologna international Vocal Competition 1.JPG" alt="Bologna international Vocal Competition 1" class="gallery-image">
+                    <div class="gallery-caption">Bologna international Vocal Competition 1</div>
                 </div>
                 
-                <!-- 图片2 -->
                 <div class="gallery-item">
-                    <img src="img/aboutpage/3.jpg" alt="演出照片2" class="gallery-image">
-                    <div class="gallery-caption" data-i18n="gallery.performance.caption2">照片详情</div>
+                    <img src="img/Photo/competition/Bologna international Vocal Competition  2.jpg" alt="Bologna international Vocal Competition 2" class="gallery-image">
+                    <div class="gallery-caption">Bologna international Vocal Competition 2</div>
                 </div>
                 
-                <!-- 可以根据需要添加更多图片 -->
                 <div class="gallery-item">
-                    <img src="img/aboutpage/1.jpg" alt="演出照片3" class="gallery-image">
-                    <div class="gallery-caption" data-i18n="gallery.performance.caption3">照片详情</div>
+                    <img src="img/Photo/competition/Bologna international Vocal Competition  3.jpg" alt="Bologna international Vocal Competition 3" class="gallery-image">
+                    <div class="gallery-caption">Bologna international Vocal Competition 3</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="img/Photo/competition/Deagu International Vocal competition  1.JPG" alt="Deagu International Vocal competition 1" class="gallery-image">
+                    <div class="gallery-caption">Deagu International Vocal competition 1</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="img/Photo/competition/Deagu International Vocal competition 2.JPG" alt="Deagu International Vocal competition 2" class="gallery-image">
+                    <div class="gallery-caption">Deagu International Vocal competition 2</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="img/Photo/competition/Farlinelli Competition .JPG" alt="Farlinelli Competition" class="gallery-image">
+                    <div class="gallery-caption">Farlinelli Competition</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="img/Photo/competition/Giovan Battista Rubini Competition .jpg" alt="Giovan Battista Rubini Competition" class="gallery-image">
+                    <div class="gallery-caption">Giovan Battista Rubini Competition</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="img/Photo/competition/Tenor Viñas Contest 1.jpg" alt="Tenor Viñas Contest 1" class="gallery-image">
+                    <div class="gallery-caption">Tenor Viñas Contest 1</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="img/Photo/competition/Tenor Viñas Contest 2.jpg" alt="Tenor Viñas Contest 2" class="gallery-image">
+                    <div class="gallery-caption">Tenor Viñas Contest 2</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="img/Photo/competition/Tenor Viñas Contest 3.jpg" alt="Tenor Viñas Contest 3" class="gallery-image">
+                    <div class="gallery-caption">Tenor Viñas Contest 3</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="img/Photo/competition/Vincerò World Opera Competition 1.JPG" alt="Vincerò World Opera Competition 1" class="gallery-image">
+                    <div class="gallery-caption">Vincerò World Opera Competition 1</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="img/Photo/performance/Vincerò World Opera Competition 2.jpg" alt="Vincerò World Opera Competition 2" class="gallery-image">
+                    <div class="gallery-caption">Vincerò World Opera Competition 2</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="img/Photo/competition/Vincerò World Opera Competition 3.JPG" alt="Vincerò World Opera Competition 3" class="gallery-image">
+                    <div class="gallery-caption">Vincerò World Opera Competition 3</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="img/Photo/competition/Vincerò World Opera Competition 4.JPG" alt="Vincerò World Opera Competition 4" class="gallery-image">
+                    <div class="gallery-caption">Vincerò World Opera Competition 4</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="img/Photo/competition/Vincerò World Opera Competition 5.JPG" alt="Vincerò World Opera Competition 5" class="gallery-image">
+                    <div class="gallery-caption">Vincerò World Opera Competition 5</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="img/Photo/competition/Vincerò World Opera Competition 6.JPG" alt="Vincerò World Opera Competition 6" class="gallery-image">
+                    <div class="gallery-caption">Vincerò World Opera Competition 6</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="img/Photo/competition/Vincerò World Opera Competition 7.JPG" alt="Vincerò World Opera Competition 7" class="gallery-image">
+                    <div class="gallery-caption">Vincerò World Opera Competition 7</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="img/Photo/competition/Vincerò World Opera Competition 9.JPG" alt="Vincerò World Opera Competition 9" class="gallery-image">
+                    <div class="gallery-caption">Vincerò World Opera Competition 9</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="img/Photo/competition/WILHELM STENHAMMARI_INTERNATIO NAL MUSIC COMPETITION 1.jpg" alt="WILHELM STENHAMMARI INTERNATIONAL MUSIC COMPETITION 1" class="gallery-image">
+                    <div class="gallery-caption">WILHELM STENHAMMARI INTERNATIONAL MUSIC COMPETITION 1</div>
+                </div>
+                
+                <!-- Performance 照片 -->
+                <div class="gallery-item">
+                    <img src="img/Photo/performance/Liedkonzert.JPG" alt="Liedkonzert" class="gallery-image">
+                    <div class="gallery-caption">Liedkonzert</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="img/Photo/performance/Music Salon 1.JPG" alt="Music Salon 1" class="gallery-image">
+                    <div class="gallery-caption">Music Salon 1</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="img/Photo/performance/Music Salon 2.JPG" alt="Music Salon 2" class="gallery-image">
+                    <div class="gallery-caption">Music Salon 2</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="img/Photo/performance/Role-Siebel 1.JPEG" alt="Role-Siebel 1" class="gallery-image">
+                    <div class="gallery-caption">Role-Siebel 1</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="img/Photo/performance/Role-Siebel 2.JPEG" alt="Role-Siebel 2" class="gallery-image">
+                    <div class="gallery-caption">Role-Siebel 2</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="img/Photo/performance/Role-Siebel 3.jpg" alt="Role-Siebel 3" class="gallery-image">
+                    <div class="gallery-caption">Role-Siebel 3</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="img/Photo/performance/Role-Siebel 4.JPG" alt="Role-Siebel 4" class="gallery-image">
+                    <div class="gallery-caption">Role-Siebel 4</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="img/Photo/performance/Role-Stephone 1.JPG" alt="Role-Stephone 1" class="gallery-image">
+                    <div class="gallery-caption">Role-Stephone 1</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="img/Photo/performance/Role-Stephone 2.JPG" alt="Role-Stephone 2" class="gallery-image">
+                    <div class="gallery-caption">Role-Stephone 2</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="img/Photo/performance/Role-Stephone 3.JPG" alt="Role-Stephone 3" class="gallery-image">
+                    <div class="gallery-caption">Role-Stephone 3</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="img/Photo/performance/Shanghai Baroque Concert 1.JPG" alt="Shanghai Baroque Concert 1" class="gallery-image">
+                    <div class="gallery-caption">Shanghai Baroque Concert 1</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="img/Photo/performance/Shanghai Baroque Concert 2.JPG" alt="Shanghai Baroque Concert 2" class="gallery-image">
+                    <div class="gallery-caption">Shanghai Baroque Concert 2</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="img/Photo/performance/Shanghai Baroque Concert 3.JPG" alt="Shanghai Baroque Concert 3" class="gallery-image">
+                    <div class="gallery-caption">Shanghai Baroque Concert 3</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="img/Photo/performance/The Fairy queen 1.JPG" alt="The Fairy queen 1" class="gallery-image">
+                    <div class="gallery-caption">The Fairy queen 1</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="img/Photo/performance/The Fairy  queen 2.JPG" alt="The Fairy queen 2" class="gallery-image">
+                    <div class="gallery-caption">The Fairy queen 2</div>
                 </div>
             </div>
         </div>
@@ -258,6 +453,19 @@
             }
         });
         
+        // 简化的图片处理，保持三列网格布局
+        window.addEventListener('DOMContentLoaded', function() {
+            // 确保所有图片加载完成后显示
+            const galleryImages = document.querySelectorAll('.gallery-image');
+            
+            galleryImages.forEach(img => {
+                img.onload = function() {
+                    this.style.opacity = '1';
+                };
+                // 初始设置透明度，确保图片加载动画流畅
+                img.style.opacity = '1';
+            });
+        });
 
     </script>
 </body>

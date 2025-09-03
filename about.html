@@ -67,22 +67,155 @@
 
 
 
-            <!-- 图片展览 -->
-            <section class="features">
+            <!-- 全新相册实现 -->
+            <section class="gallery-section">
                 <div class="container">
                     <h2 class="section-title" data-i18n="features.title">过往活动</h2>
-                    <div class="feature-grid">
-                        <div class="feature-item" onclick="window.location.href='personal-gallery.html'" style="cursor: pointer;">
-                            <img src="img/aboutpage/1.jpg" alt="个人形象">
-                            <h3 data-i18n="features.item1.title" style="font-style: normal;">个人形象</h3>
-                        </div>
-                        <div class="feature-item" onclick="window.location.href='performance-gallery.html'" style="cursor: pointer;">
-                            <img src="img/aboutpage/2.jpg" alt="演出记录">
-                            <h3 data-i18n="features.item2.title" style="font-style: normal;">演出记录</h3>
-                        </div>
+                    <div class="gallery-container">
+                        <!-- 个人形象相册 -->
+                        <a href="personal-gallery.html" class="gallery-item">
+                            <div class="gallery-image-wrapper">
+                                <img src="img/aboutpage/1.jpg" alt="个人形象" class="gallery-image">
+                                <div class="gallery-overlay">
+                                    <span class="gallery-icon"><i class="fas fa-search-plus"></i></span>
+                                </div>
+                            </div>
+                            <div class="gallery-caption">
+                                <h3 data-i18n="features.item1.title">个人形象</h3>
+                            </div>
+                        </a>
+                        
+                        <!-- 演出记录相册 -->
+                        <a href="performance-gallery.html" class="gallery-item">
+                            <div class="gallery-image-wrapper">
+                                <img src="img/aboutpage/2.jpg" alt="演出记录" class="gallery-image">
+                                <div class="gallery-overlay">
+                                    <span class="gallery-icon"><i class="fas fa-search-plus"></i></span>
+                                </div>
+                            </div>
+                            <div class="gallery-caption">
+                                <h3 data-i18n="features.item2.title">演出记录</h3>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </section>
+            
+            <style>
+                /* 全新相册样式 */
+                .gallery-section {
+                    margin: 50px 0;
+                    padding: 0;
+                }
+                
+                .gallery-container {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                    gap: 40px;
+                    justify-items: center;
+                    margin-top: 30px;
+                }
+                
+                .gallery-item {
+                    display: block;
+                    width: 100%;
+                    max-width: 400px;
+                    text-decoration: none;
+                    border-radius: 12px;
+                    overflow: hidden;
+                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+                    background-color: white;
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                }
+                
+                .gallery-item:hover {
+                    transform: translateY(-8px);
+                    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+                }
+                
+                .gallery-image-wrapper {
+                    position: relative;
+                    width: 100%;
+                    height: 320px;
+                    overflow: hidden;
+                }
+                
+                .gallery-image {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                    transition: transform 0.5s ease;
+                }
+                
+                .gallery-item:hover .gallery-image {
+                    transform: scale(1.08);
+                }
+                
+                .gallery-overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.35);
+                    opacity: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: opacity 0.3s ease;
+                }
+                
+                .gallery-item:hover .gallery-overlay {
+                    opacity: 1;
+                }
+                
+                .gallery-icon {
+                    color: white;
+                    font-size: 2.2rem;
+                }
+                
+                .gallery-caption {
+                    padding: 20px;
+                    text-align: center;
+                }
+                
+                .gallery-caption h3 {
+                    margin: 0;
+                    font-size: 1.3rem;
+                    color: #333;
+                    font-weight: 600;
+                    font-style: normal;
+                }
+                
+                /* 响应式设计 */
+                @media (max-width: 768px) {
+                    .gallery-section {
+                        margin: 30px 0;
+                    }
+                    
+                    .gallery-container {
+                        gap: 25px;
+                        margin-top: 20px;
+                    }
+                    
+                    .gallery-image-wrapper {
+                        height: 260px;
+                    }
+                    
+                    .gallery-icon {
+                        font-size: 1.8rem;
+                    }
+                    
+                    .gallery-caption {
+                        padding: 15px;
+                    }
+                    
+                    .gallery-caption h3 {
+                        font-size: 1.2rem;
+                    }
+                }
+            </style>
 
         </div>
     </main>
