@@ -427,9 +427,9 @@ body > * {
 }
 
 .hero-subtitle {
-    font-size: 2.5rem; /* 调整为更合适的大小，与主标题保持更好的比例 */
+    font-size: 3rem; /* 调整为更合适的大小，与主标题保持更好的比例 */
     margin-bottom: 1rem;
-    font-weight: 300;
+    font-weight: 700; /* 修改为700，使字体加粗 */
     color: #f0f0f0; /* 改为偏白色的浅色 */
     font-style: italic;
     font-family: 'Edwardian Script ITC', 'French Script MT', 'Lucida Handwriting', 'Goudy Old Style', 'Palatino Linotype', serif;
