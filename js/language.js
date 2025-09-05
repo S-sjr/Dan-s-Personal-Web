@@ -7,7 +7,7 @@ const translations = {
         'nav.media': '媒体中心',
         'nav.schedule': '演出日程',
         'nav.contact': '联系我',
-        'hero.title': '帅 文 波',
+        'hero.title': '帅  文  波',
         'hero.subtitle': '假声男高音',
         'hero.button': '了解更多',
         'about.subtitle': '关于我',
