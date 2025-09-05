@@ -72,7 +72,7 @@ body::before {
 
 /* 演出页面整体容器样式 */
 .schedule-content-container {
-    background-color: rgba(0, 0, 0, 0.4); /* 40%黑色半透明背景 */
+    background-color: rgba(255, 251, 235, 0.95); /* 米白色半透明背景 */
     border-radius: 8px; /* 圆角效果 */
     padding: 20px;
     margin-bottom: 30px;
@@ -863,23 +863,23 @@ body > * {
 }
 
  .about-bio-container {
-    /* 黑色半透明背景 */
-    background-color: rgba(0, 0, 0, 0.4);
+    /* 米白色半透明背景 */
+    background-color: rgba(255, 251, 235, 0.95);
     /* 圆角 */
     border-radius: 20px;
     /* 内边距 */
     padding: 40px;
-    /* 文字颜色设置为白色 */
-    color: white;
+    /* 文字颜色设置为黑色 */
+    color: #333;
     margin-bottom: 60px;
 }
 
-/* 确保容器内的文本和标题都是白色 */
+/* 确保容器内的文本和标题都是黑色 */
 .about-bio-container h2,
 .about-bio-container p,
 .about-bio-container a,
 .about-bio-container .image-caption {
-    color: white !important;
+    color: #333 !important;
 }
 
 /* 为下载简历链接添加悬停效果 */
@@ -1468,6 +1468,23 @@ body > * {
     .date-col, .event-col, .location-col, .ticket-col {
         width: 100%;
         padding: 1rem;
+    }
+    
+    /* 演出页面小屏幕排版居中对齐 */
+    .about-content {
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .about-content .about-text {
+        text-align: center;
+        align-items: center;
+    }
+    
+    /* 确保按钮在小屏幕上也居中显示 */
+    .about-content .btn-sm {
+        display: inline-block;
+        margin-top: 10px;
     }
     
     .subscribe-form {

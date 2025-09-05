@@ -6,6 +6,7 @@
     <title>DANDAN</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- 导航栏 -->
@@ -14,6 +15,10 @@
             <div class="logo">
                 <a href="index.html">DANDAN</a>
             </div>
+            <!-- 汉堡菜单按钮 -->
+            <button class="menu-toggle" aria-label="菜单">
+                <i class="fas fa-bars"></i>
+            </button>
             <ul class="nav-links">
                 <li><a href="index.html" data-i18n="nav.home">首页</a></li>
                 <li><a href="about.html" data-i18n="nav.about">关于我</a></li>
@@ -39,7 +44,7 @@
                 <!-- 修改为居中对齐布局 -->
                 <div style="width: 100%; text-align: center;">
                     <!-- 联系方式模块 -->
-                    <div class="contact-info" style="max-width: 600px; margin: 0 auto 3rem; padding: 2rem; border-radius: 8px; color: white;">
+                    <div class="contact-info" style="max-width: 600px; margin: 0 auto 3rem; padding: 2rem; text-align: center; color: white;">
                         <ul class="contact-details">
                             <li class="email" data-i18n="contact.email">邮箱: dandancountertenor@gmail.com</li>
                         </ul>
@@ -47,28 +52,28 @@
                     </div>
                     
                     <!-- 发送消息模块 - 添加卡片背景效果 -->
-                    <div class="contact-form" style="max-width: 600px; margin: 0 auto; background-color: rgba(0, 0, 0, 0.4); padding: 2rem; border-radius: 8px; text-align: center; color: white;">
-                        <h2 class="section-title" data-i18n="contact.formTitle">发送消息</h2>
+                    <div class="contact-form" style="max-width: 600px; margin: 0 auto; background-color: rgba(255, 251, 235, 0.95); padding: 2rem; border-radius: 8px; text-align: center; color: #333;">
+                        <h2 class="section-title" data-i18n="contact.formTitle" style="color: #333333;">发送消息</h2>
                         <form id="contact-form">
                             <div style="display: flex; gap: 1rem;">
                                 <div class="form-group" style="flex: 1;">
-                                    <label for="lastName" data-i18n="contact.lastNameLabel" style="text-align: left; display: block;">姓</label>
+                                    <label for="lastName" data-i18n="contact.lastNameLabel" style="text-align: left; display: block; color: #333;">姓</label>
                                     <input type="text" id="lastName" required>
                                 </div>
                                 <div class="form-group" style="flex: 1;">
-                                    <label for="firstName" data-i18n="contact.firstNameLabel" style="text-align: left; display: block;">名</label>
+                                    <label for="firstName" data-i18n="contact.firstNameLabel" style="text-align: left; display: block; color: #333;">名</label>
                                     <input type="text" id="firstName" required>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="email" data-i18n="contact.emailLabel" style="text-align: left; display: block;">电子邮箱</label>
+                                <label for="email" data-i18n="contact.emailLabel" style="text-align: left; display: block; color: #333;">电子邮箱</label>
                                 <input type="email" id="email" required>
                             </div>
                             <div class="form-group">
-                                <label for="message" data-i18n="contact.messageLabel" style="text-align: left; display: block;">消息内容</label>
+                                <label for="message" data-i18n="contact.messageLabel" style="text-align: left; display: block; color: #333;">消息内容</label>
                                 <textarea id="message" rows="5" required></textarea>
                             </div>
-                            <button type="submit" class="btn" data-i18n="contact.submitBtn">发送消息</button>
+                            <button type="submit" class="btn" data-i18n="contact.submitBtn" style="background-color: #8B7355; color: #ffffff; border: 1px solid #A0522D;">发送消息</button>
                         </form>
                     </div>
                 </div>
@@ -92,13 +97,11 @@
 
     <!-- EmailJS库文件引入 -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/language.js"></script>
     
     <!-- EmailJS配置和表单提交逻辑 -->
     <script>
         // 初始化EmailJS
-        emailjs.init('I27yfQjALdnxlfH-9'); // 使用正确的用户ID
+        emailjs.init('l27yfQjALdnxIfH-9'); // 使用正确的用户ID
         
         // 获取表单元素
         const contactForm = document.getElementById('contact-form');
@@ -107,17 +110,36 @@
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
+            // 获取表单数据
+            const lastName = document.getElementById('lastName').value.trim();
+            const firstName = document.getElementById('firstName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            
+            // 简单表单验证
+            if (!lastName || !firstName || !email || !message) {
+                alert('请填写所有必填字段');
+                return;
+            }
+            
+            // 邮箱格式验证
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('请输入有效的电子邮箱地址');
+                return;
+            }
+            
             // 准备邮件参数
             const emailParams = {
                 to_email: 'dandancountertenor@gmail.com',
-                from_name: document.getElementById('lastName').value + ' ' + document.getElementById('firstName').value,
-                from_email: document.getElementById('email').value,
+                from_name: lastName + ' ' + firstName,
+                from_email: email,
                 subject: '来自网站的消息', // 添加默认主题
-                message: document.getElementById('message').value
+                message: message
             };
             
             // 发送邮件 - 使用正确的服务ID
-            emailjs.send('service_j8q8z4a', 'template_spdljmh', emailParams)
+            emailjs.send('service_6saquto', 'template_spdljmh', emailParams)
                 .then(function(response) {
                     // 邮件发送成功提示 - 改进用户体验
                     alert('消息发送成功！我会尽快回复您。');
@@ -130,5 +152,7 @@
                 });
         });
     </script>
+    <script src="js/main.js"></script>
+    <script src="js/language.js"></script>
 </body>
 </html>

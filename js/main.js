@@ -1,15 +1,17 @@
-// 导航栏激活状态
-const currentPage = window.location.pathname.split('/').pop();
-const navLinks = document.querySelectorAll('.nav-links a');
-
-// 设置导航链接的激活状态
-navLinks.forEach(link => {
-    if (link.getAttribute('href') === currentPage) {
-        link.classList.add('active');
-    } else {
-        link.classList.remove('active');
-    }
-});
+// 导航栏激活状态 - 直接使用匿名函数避免变量声明冲突
+(function() {
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const currentPath = window.location.pathname.split('/').pop();
+    
+    // 设置导航链接的激活状态
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+})();
 
 // 轮播图功能
 function initSlider() {
