@@ -12,8 +12,8 @@ const translations = {
         'hero.button': '了解更多',
         'about.subtitle': '关于我',
         'about.bio1': '他被欧洲的乐评⼈称之为：⼀个充满戏剧张⼒的嗓⾳。\n' + 
-            '本科就读于上海音乐学院声乐歌剧系（2020-2025），跟随上海音乐学院声乐歌剧系施恒教授、艺术指导吴越女士。他也是上海音乐学院声乐歌剧系历史上的第一位假声男高音。\n ' +
-            '从2025起，作为研究生就读于德国斯图加特国立音乐与表演艺术学院声乐歌剧系，跟随克罗地亚籍女中音歌唱家DianaHaller学习。\n'+ 
+            '本科毕业于上海音乐学院声乐歌剧系（2020-2025)。 他也是上海音乐学院声乐歌剧系历史上的第一位假声男高音。\n ' +
+            '从2025起，作为研究生就读于德国斯图加特国立音乐与表演艺术学院声乐歌剧系。\n'+ 
             '他在欧洲求学期间跟随了世界著名花腔女高音歌唱家Cheryl Studer女士，柏林汉斯艾斯勒音乐学院教授/声乐教育家Renata Faltin女士学习，同时他还接受过意大利女高音歌唱家Francesco Bruni，韩国男中音歌唱家ChangHan Lim，旅德钢琴家⻢源女士、柏林国家歌剧院Mr.Klauss Sallmann与Mr.Uwe Griem、法兰克福国家歌剧院Mr.Felice Venanzoni...等等的老师们的指导与帮助。\n'+ 
             '2025年他加入了由世界著名男中音歌唱家Thomas Hampson和女高音歌唱家Melanie Diener在德国Waiblingen市组织的国际歌剧工作室Internationale Opernwerkstatt Waiblingen，是该项目2025年度歌剧奖学金的获得者。',
         'about.bio2': '近年来，他的身影活跃在世界众多国际知名赛事，并获得了一些成绩：\n' +
@@ -156,7 +156,7 @@ const translations = {
             '• 2023 Bologna International Voice Competition-5° PREMIO-ENCOURAGEMENT AWARD...',
         'about.bio2': 'In 2025 he entered the Staatliche Hochschule für Musik und Darstellende Kunst Stuttgart to study (Gesang-Oper with Diana Haller).\n' +
             'From 2023, he has been studying in Europe under Prof. Renate Faltin (Hochschule für Musik Hanns Eisler), Prof. Cheryl Studer (Hochschule für Musik Würzburg), Mr. Klaus Sallmann(Staatsoper Berlin),Mr. Uwe Griem, and Mr. Felice Venanzoni (Oper Frankfurt).\n' +
-            '2020-2025, he study in Shanghai Conservatory of Music (Vocal and Opera with Prof.Heng Shi).\n' +
+            '2020-2025, he study in Shanghai Conservatory of Music (Vocal and Opera）.\n' +
             '2025.09,He is a member of Waiblingen international Opernwerkstatt (Germany) and an opera scholarship winner.In the meantime, he will study with Thomas Hampsen and Melanie Diener and give concerts with Württembergischen Philharmonie Reutlingen.\n',
         'about.bio3': '2023.05, He held a concert of "Resplendent Pearl" Baroque Music at the Opera House of the Shanghai Conservatory of Music. 2023.06，He performed "Baroque Chamber Music Concert" with the Chamber Orchestra of Shanghai Conservatory of Music. And served as the lead singer and chorus of the alto part of the Purcell opera "The Fairy Queen".2023.06, He performed Gouno\' opera "Romeo et Juliette" and played "Stepheno" in Shanghai. 2023.11, He attended the "German and Russian Master Concert-Night of Art songs" held at the ShangYin Opera House.\n'+ 
             'He began to study vocal music in 2016 and tried to learn both tenor and baritone in a period of time. In 2018, he met Italian soprano Francesca Bruni and Shanghai Conservatory of Music Bass- Baritone Pro.Heng Shi, transitionto study Countertenor.\n' +
@@ -290,7 +290,7 @@ const translations = {
             '• 2023 Bologna International Voice Competition - 5. Preis usw...',
         'about.bio2': 'Im Jahr 2025 Studiere er an der Staatlichen Hochschule für Musik und Darstellende Kunst Stuttgart im Studiengang Gesang - Oper (mit Diana Haller).\n' +
             'Ab 2023, er studierte in Europa bei Prof. Renate Faltin (Hochschule für Musik Hanns Eisler Berlin), Prof. Cheryl Studer (Hochschule für Musik Würzburg), Herr.Klaus Sallmann (Staatsoper Berlin), Herr.Uwe Griem und Herr.Felice Venanzoni (Oper Frankfurt).\n' +
-            'Von 2020 bis 2025 studierte er Gesang und Oper an der Shanghai Conservatory of Music (mit Prof.Heng Shi).\n' +
+            'Von 2020 bis 2025 studierte er an der Shanghai Conservatory of Music（Gesang und Oper）.\n' +
             'Seit September 2025 ist er Mitglied der Internationalen Opernwerkstatt Waiblingen (Deutschland) und Stipendiat im Bereich Oper. Im Rahmen dessen arbeitet er mit Thomas Hampson und Melanie Diener zusammen und konzertiert mit der Württembergischen Philharmonie Reutlingen.\n',
         'about.bio3': 'Im Mai 2023 gab er ein Barockkonzert mit dem Titel „Resplendent Pearl“ im Opernhaus des Shanghai Conservatory of Music.\n' +
             'Im Juni 2023 trat er mit dem Kammerorchester des Konservatoriums im Konzert „Barocke Kammermusik“ auf und übernahm sowohl die Hauptrolle als auch den Alt-Part im Chor der Oper „The Fairy Queen“ von Henry Purcell. Ebenfalls im Juni 2023 sang er in Charles Gounods Oper „Roméo et Juliette“ in Shanghai die Rolle des Stéphano. Im November 2023 wirkte er beim Konzert „Deutscher und Russischer Meisterabend – Nacht der Kunstlieder“ im Shangyin Opera House mit.\n' +
