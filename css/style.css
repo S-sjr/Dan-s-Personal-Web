@@ -9,18 +9,79 @@
     --primary-color: #8B7355; /* 深金色 - 典雅高贵 */
     --secondary-color: #FFFDD0; /* 奶油色 - 温暖 */
     --dark-color: #333333; /* 深灰色 - 文字 */
-    --light-color: #F5F5F5; /* 浅灰色 - 背景 */
+    --light-color: #F8F5F0; /* 浅米色/象牙色 - 古典欧洲风格背景 */
     --accent-color: #A0522D; /* 棕褐色 - 强调 */
     --white-color: #FFFFFF; /* 白色 - 背景 */
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
 }
 
+/* 全局背景样式 - 为所有页面添加与首页相同的背景 */
 body {
     font-family: 'Lato', sans-serif;
     line-height: 1.6;
     color: var(--dark-color);
-    background-color: var(--light-color);
+    background-color: #525252; /* 设置与首页hero区域相同的深色背景 */
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* 全局背景图案 - 使用伪元素实现，与首页hero区域相同的背景图片效果 */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../img/bgpitcture.png');
+    background-size: 700px 700px;
+    background-position: center center;
+    background-repeat: repeat;
+    opacity: 0.35; /* 稍低于首页，避免影响内容可读性 */
+    z-index: 0; /* 确保背景在内容下方 */
+    pointer-events: none; /* 确保背景不干扰页面交互 */
+}
+
+/* 各页面main部分的特定背景样式 */
+/* 为了保持一致性，我们保持相同的背景图片效果，但调整容器的背景色和透明度 */
+.about-main,
+.media-main,
+.schedule-main {
+    position: relative; /* 确保定位上下文 */
+    background-color: #525252; /* 设置与首页hero区域相同的深色背景 */
+    z-index: 1; /* 确保内容在背景之上 */
+}
+
+/* 为了确保内容区域的可读性，在容器内部添加半透明覆盖层 */
+.about-main::before,
+.media-main::before,
+.schedule-main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(82, 82, 82, 0.8); /* 半透明深色覆盖 */
+    z-index: -1; /* 确保覆盖层在内容下方，但在全局背景之上 */
+    pointer-events: none; /* 确保不干扰交互 */
+}
+
+/* 演出页面整体容器样式 */
+.schedule-content-container {
+    background-color: rgba(0, 0, 0, 0.4); /* 40%黑色半透明背景 */
+    border-radius: 8px; /* 圆角效果 */
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+/* 确保页面内容显示在背景之上 */
+body > * {
+    position: relative;
+    z-index: 1;
 }
 
 .container {
@@ -113,7 +174,7 @@ body {
 
 /* 导航栏 */
  .navbar {
-    background-color: var(--white-color);
+    background-color: #F8F5F0;
     box-shadow: var(--shadow);
     position: sticky;
     top: 0;
@@ -191,7 +252,7 @@ body {
 /* 语言切换 */
  .language-switch {
     display: flex;
-    background-color: #F8F5F0;
+    background-color: #FFFFFF;
     padding: 5px 10px;
     border-radius: 8px;
     border: 1px solid #E8E4DF;
@@ -228,61 +289,116 @@ body {
     box-shadow: none;
 }
 
-/* 英雄区域 - 外层容器，设置整体垂直居中 */
-.hero {
-    background-color: var(--light-color);
-    height: 100vh;
-    display: flex;
-    align-items: center; /* 垂直居中 */
-    justify-content: center; /* 水平居中 */
-    color: var(--dark-color);
+/* 背景图案区域 - 为各个页面的main部分添加统一背景 */
+/* about页面背景 */
+.about-main {
     position: relative;
+    background-color: #525252; /* 设置偏黑色的深色背景 */
     overflow: hidden;
 }
 
-/* 英雄区域容器 - 中层容器，保持垂直居中 */
+/* media页面背景 */
+.media-main {
+    position: relative;
+    background-color: #525252; /* 设置偏黑色的深色背景 */
+    overflow: hidden;
+}
+
+/* schedule页面背景 */
+.schedule-main {
+    position: relative;
+    background-color: #525252; /* 设置偏黑色的深色背景 */
+    overflow: hidden;
+}
+
+/* contact页面背景 */
+.contact-main {
+    position: relative;
+    background-color: #525252; /* 设置偏黑色的深色背景 */
+    overflow: hidden;
+}
+
+/* 英雄区域背景 */
+.hero {
+    position: relative;
+    background-color: #525252; /* 设置偏黑色的深色背景 */
+    overflow: hidden;
+    min-height: 90vh; /* 增加header高度，占视口高度的90% */
+    margin-bottom: 0; /* 缩小header的下边距 */
+}
+
+/* 为各个页面的main部分添加背景图案 - 使用伪元素实现 */
+.about-main::before,
+.media-main::before,
+.schedule-main::before,
+.contact-main::before,
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../img/bgpitcture.png');
+    background-size: 700px 700px;
+    background-position: center center;
+    background-repeat: repeat;
+    opacity: 0.55;
+    z-index: 0;
+}
+
+/* 确保内容显示在背景之上 */
+.about-main > *,
+.media-main > *,
+.schedule-main > *,
+.contact-main > *,
+.hero > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* 英雄区域容器 - 中层容器，使用flex布局实现垂直和水平居中 */
 .hero-container {
     display: flex;
     align-items: center; /* 垂直居中 */
     justify-content: center; /* 水平居中 */
     width: 100%;
     height: 100%;
-    padding: 0.5rem 0;
+    padding: 4rem 1rem 2rem; /* 增加上内边距，使内容靠下一点 */
+    box-sizing: border-box;
 }
 
 /* 新添加的内容组，用于包裹文字和图片 */
 .hero-content-group {
     display: flex;
-    align-items: center; /* 改为center，确保子元素垂直居中 */
+    align-items: center; /* 确保子元素垂直居中 */
+    justify-content: center; /* 确保内容水平居中 */
     width: 100%;
-    max-width: 850px;
-    gap: 40px; /* 减小间距，避免在小屏幕上覆盖 */
-    transform: translate(10%, -5%) scale(1.2);
-    transform-origin: center;
+    max-width: 900px;
+    gap: clamp(40px, 8vw, 60px); /* 增大文字与图片之间的间距 */
     flex-wrap: wrap;
+    margin: auto; /* 确保在所有屏幕尺寸下都能居中 */
 }
 
-/* 左侧文字内容 */
+/* 左侧文字内容 - 大屏左对齐 */
 .hero-text {
     flex: 1;
     min-width: 300px;
-    max-width: 50%;
-    padding-right: 0;
-    text-align: left;
-    padding-top: 0;
-    padding-bottom: 0;
+    max-width: 100%; /* 移除最大宽度限制，使其能完全适应屏幕 */
+    text-align: left; /* 大屏左侧对齐显示文字 */
     display: flex;
     flex-direction: column;
-    gap: 2.5rem; /* 增加元素间距，从1.5rem改为2.5rem */
-    height: 100%;
-    justify-content: center; /* 垂直居中内容 */
+    gap: clamp(2.5rem, 5vw, 4rem); /* 增大内部元素的间距 */
+    justify-content: center;
+    align-items: flex-start; /* 大屏左侧对齐内容元素 */
+    padding: 0.5rem;
 }
 
 /* 修复hero区域按钮外框变形问题并调整按钮位置 */
 .hero-text .btn {
     display: inline-block;
     width: auto;
-    align-self: flex-start;
+    align-self: flex-start; /* 按钮在大屏上左侧对齐 */
     border: 1px solid transparent;
     transition: all 0.3s ease;
 }
@@ -294,7 +410,7 @@ body {
     margin-top: 0; /* 移除负的顶部外边距，使hero-text高度自然增长 */
     padding-top: 0; /* 上下内边距调整为0 */
     padding-bottom: 0;
-    color: var(--dark-color);
+    color: #f8f8f8; /* 改为偏白色的浅色 */
     line-height: 1; /* 设置行高与文字高度一致 */
     display: inline-block;
     width: auto;
@@ -314,7 +430,7 @@ body {
     font-size: 2.5rem; /* 调整为更合适的大小，与主标题保持更好的比例 */
     margin-bottom: 1rem;
     font-weight: 300;
-    color: var(--dark-color);
+    color: #f0f0f0; /* 改为偏白色的浅色 */
     font-style: italic;
     font-family: 'Edwardian Script ITC', 'French Script MT', 'Lucida Handwriting', 'Goudy Old Style', 'Palatino Linotype', serif;
 }
@@ -323,12 +439,13 @@ body {
 .hero-slider {
     flex: 0.8;
     min-width: 250px;
-    max-width: 35%;
+    max-width: 80%; /* 增加最大宽度，使其在小屏幕上更合理显示 */
     position: relative;
     overflow: hidden;
     border-radius: 8px;
     box-shadow: var(--shadow);
     aspect-ratio: 3/4;
+    margin: 0 auto;
 }
 
  .slider-container {
@@ -435,6 +552,7 @@ body {
     .hero-container {
         justify-content: center;
         align-items: center;
+        padding: 2rem 1rem;
     }
     
     .hero-content-group {
@@ -442,51 +560,86 @@ body {
         justify-content: center;
         align-items: center;
         text-align: center;
-        gap: 20px;
-        transform: scale(1);
+        gap: 30px;
+        transform: none; /* 移除基础样式中的transform偏移 */
+        max-width: 100%;
+        padding: 0 1rem;
     }
     
     .hero-text {
         max-width: 100%;
         padding-right: 0;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
         text-align: center;
+        min-width: auto;
+        flex: none;
     }
     
     .hero-slider {
-        max-width: 70%;
+        max-width: 85%;
         height: auto;
-        max-height: 60vh;
+        max-height: 50vh;
         aspect-ratio: 3/4;
+        margin: 0 auto;
+        flex: none;
     }
     
     .hero-title {
-        font-size: 2.8rem;
+        font-size: 2.5rem;
         text-align: center;
         white-space: normal;
+        line-height: 1.1;
+        transform: none;
+        max-width: 100%;
+    }
+    
+    /* 英文标题特定样式 - 在中等屏幕上适当调整 */
+    .hero-title[data-i18n="hero.title"] {
+        font-size: 2.8rem;
     }
     
     .hero-subtitle {
-        font-size: 2rem;
+        font-size: 1.8rem;
         text-align: center;
+    }
+    
+    /* 中等屏幕上文字和按钮居中对齐 */
+    .hero-text {
+        text-align: center;
+        align-items: center;
+    }
+    
+    .hero-text .btn {
+        align-self: center;
+        margin-top: 1rem;
     }
 }
 
 /* 响应式设计 - 小屏幕调整 */
 @media (max-width: 768px) {
     .hero-container {
+        align-items: center; /* 小屏幕上也保持垂直居中 */
         justify-content: center;
-        align-items: center;
     }
     
     .hero-content-group {
+        align-items: center; /* 小屏幕上也保持子元素垂直居中 */
         justify-content: center;
+        max-width: 95%; /* 小屏幕上增加最大宽度 */
+    }
+    
+    .hero-text {
+        text-align: center;
         align-items: center;
     }
     
+    .hero-text .btn {
+        align-self: center;
+    }
+    
     .hero-slider {
-        height: 40vh;
-        max-width: 90%;
+        height: auto; /* 让高度自适应 */
+        max-width: 80%;
     }
     
     .hero-title {
@@ -507,13 +660,25 @@ body {
 /* 响应式设计 - 超小屏幕调整 */
 @media (max-width: 576px) {
     .hero-container {
+        align-items: center; /* 超小屏幕上也保持垂直居中 */
         justify-content: center;
-        align-items: center;
+        padding: 1rem 0.5rem; /* 超小屏幕上减少内边距 */
     }
     
     .hero-content-group {
+        align-items: center; /* 超小屏幕上也保持子元素垂直居中 */
         justify-content: center;
+        max-width: 100%; /* 超小屏幕上使用全宽 */
+        gap: 20px; /* 超小屏幕上固定较小间距 */
+    }
+    
+    .hero-text {
+        text-align: center;
         align-items: center;
+    }
+    
+    .hero-text .btn {
+        align-self: center;
     }
     
     .hero-title {
@@ -535,6 +700,7 @@ body {
     text-align: left; /* 将文字对齐方式改为左对齐 */
     margin-bottom: 3rem;
     position: relative;
+    color: white; /* 将字体颜色改为白色 */
 }
 
  .section-title::after {
@@ -542,7 +708,7 @@ body {
     display: block;
     width: 80px;
     height: 3px;
-    background-color: var(--primary-color);
+    background-color: var(--primary-color); /* 使用主色调作为下划线颜色，统一所有标题下划线 */
     margin: 1rem 0 0 0; /* 调整margin以适应左对齐布局 */
 }
 
@@ -581,7 +747,7 @@ body {
 
 /* 页脚 */
  .footer {
-    background-color: var(--dark-color);
+    background-color: #333333;
     color: var(--white-color);
     padding: 3rem 0;
 }
@@ -662,13 +828,29 @@ body {
 /* 关于页面 */
  .about-main {
     padding: 5rem 0;
-    background-color: var(--white-color);
 }
 
+/* 媒体页面 */
+ .media-main {
+    padding: 5rem 0;
+}
+
+/* 演出页面 */
+ .schedule-main {
+    padding: 5rem 0;
+}
+
+/* 联系页面 */
+ .contact-main {
+    padding: 5rem 0;
+}
+
+/* 页面主标题样式 */
  .page-title {
-    text-align: center;
+    text-align: center; /* 标题居中对齐 */
     margin-bottom: 3rem;
     position: relative;
+    color: white; /* 使用白色文字 */
 }
 
  .page-title::after {
@@ -676,16 +858,41 @@ body {
     display: block;
     width: 80px;
     height: 3px;
-    background-color: var(--primary-color);
-    margin: 1rem auto 0;
+    background-color: var(--primary-color); /* 使用主色调作为下划线颜色，统一所有标题下划线 */
+    margin: 1rem auto 0; /* 下划线居中显示 */
 }
 
- .about-content {
+ .about-bio-container {
+    /* 黑色半透明背景 */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* 圆角 */
+    border-radius: 20px;
+    /* 内边距 */
+    padding: 40px;
+    /* 文字颜色设置为白色 */
+    color: white;
+    margin-bottom: 60px;
+}
+
+/* 确保容器内的文本和标题都是白色 */
+.about-bio-container h2,
+.about-bio-container p,
+.about-bio-container a,
+.about-bio-container .image-caption {
+    color: white !important;
+}
+
+/* 为下载简历链接添加悬停效果 */
+.about-bio-container .resume-link:hover {
+    color: #ffd700 !important; /* 金色 */
+    text-decoration: underline;
+}
+
+.about-content {
     display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin-bottom: 3rem;
+    gap: 60px;
     align-items: center;
+    margin-bottom: 60px;
 }
 
  .about-image {
@@ -706,10 +913,11 @@ body {
     min-width: 300px; /* 确保在小屏幕上也有足够的宽度 */
 }
 
+ /* 内容区域样式 - 修改为半透明背景，保持全局背景可见 */
  .about-section {
     margin-bottom: 4rem;
     padding: 2rem;
-    background-color: var(--light-color);
+    background-color: rgba(248, 245, 240, 0.9); /* 半透明浅米色背景 */
     border-radius: 2px;
     box-shadow: var(--shadow);
 }
@@ -860,11 +1068,7 @@ body {
     top: -5px;
 }
 
-/* 媒体页面 */
- .media-main {
-    padding: 5rem 0;
-    background-color: var(--white-color);
-}
+
 
  .page-description {
     text-align: center;
@@ -907,6 +1111,7 @@ body {
     gap: 4rem; /* 增加网格间距 */
 }
 
+ /* 视频项 - 修改为半透明背景 */
  .video-item {
     background-color: var(--light-color);
     border-radius: 2px;
@@ -982,11 +1187,6 @@ body {
     margin-bottom: 1.5rem;
 }
 
-/* 演出日程页面 */
- .schedule-main {
-    padding: 5rem 0;
-    background-color: var(--white-color);
-}
 
  .schedule-table {
     width: 100%;
@@ -1035,8 +1235,9 @@ body {
     text-align: center;
 }
 
+ /* 订阅部分 - 修改为半透明背景 */
  .subscribe-section {
-    background-color: var(--light-color);
+    background-color: rgba(248, 245, 240, 0.9); /* 半透明浅米色背景 */
     padding: 3rem;
     border-radius: 2px;
     text-align: center;
@@ -1060,643 +1261,9 @@ body {
     border-radius: 0 2px 2px 0;
 }
 
-/* 联系页面 */
+/* 联系页面 - 修改为半透明背景 */
  .contact-main {
     padding: 5rem 0;
-    background-color: var(--white-color);
-}
-
- .contact-content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
-
- .contact-form, .contact-info {
-    flex: 1;
-    min-width: 300px;
-}
-
- .form-group {
-    margin-bottom: 1.5rem;
-}
-
- .form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-}
-
- .form-group input, .form-group textarea {
-    width: 100%;
-    padding: 12px 16px;
-    border: 1px solid #ddd;
-    border-radius: 2px;
-    font-size: 1rem;
-    font-family: 'Lato', sans-serif;
-}
-
- .form-group textarea {
-    resize: vertical;
-}
-
- .contact-details {
-    list-style: none;
-    margin-bottom: 2rem;
-}
-
- .contact-details li {
-    margin-bottom: 1rem;
-    position: relative;
-    padding-left: 1.5rem;
-}
-
- .contact-details li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 5px;
-    width: 10px;
-    height: 10px;
-    background-color: var(--primary-color);
-    border-radius: 50%;
-}
-
- .map-container {
-    margin-top: 2rem;
-    border-radius: 2px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-}
-
- .map-container img {
-    width: 100%;
-    height: auto;
-}
-
-/* 响应式设计 */
- @media (max-width: 992px) {
-    .nav-links li {
-        margin-left: 1rem;
-    }
-}
-
- @media (max-width: 768px) {
-    .navbar .container {
-        flex-direction: column;
-    }
-
-    .logo {
-        margin-bottom: 1rem;
-    }
-
-    .nav-links {
-        margin-bottom: 1rem;
-    }
-
-    .schedule-header, .schedule-item {
-        flex-direction: column;
-    }
-
-    .date-col, .event-col, .location-col, .ticket-col {
-        width: 100%;
-        padding: 1rem;
-    }
-
-    .subscribe-form {
-        flex-direction: column;
-    }
-
-    .subscribe-form input {
-        margin-bottom: 1rem;
-        border-radius: 2px;
-    }
-
-    .subscribe-form .btn {
-        border-radius: 2px;
-    }
-}
-
- @media (max-width: 576px) {
-    /* 超小屏幕优化 */
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    /* 导航栏优化 */
-    .navbar {
-        padding: 0.75rem 0;
-    }
-    
-    .logo {
-        font-size: 1.25rem;
-    }
-    
-    .menu-toggle {
-        top: 0.75rem;
-        font-size: 1.25rem;
-    }
-    
-    /* 英雄区域优化 */
-    .hero {
-        padding: 3rem 0;
-        height: auto;
-        min-height: 100vh;
-    }
-    
-    .hero-content-group {
-        gap: 20px;
-    }
-    
-    .hero-text {
-        gap: 1rem;
-    }
-    
-    .hero-title {
-        font-size: 1.8rem;
-        margin-top: 0;
-        line-height: 1.2;
-    }
-    
-    .hero-subtitle {
-        font-size: 1.4rem;
-    }
-    
-    .hero-slider {
-        max-width: 100%;
-        min-height: 30vh;
-        margin-top: 1rem;
-    }
-    
-    /* 按钮优化 */
-    .btn {
-        padding: 10px 20px;
-        font-size: 0.875rem;
-    }
-    
-    /* 页脚优化 */
-    .footer .container {
-        flex-direction: column;
-        text-align: center;
-        padding: 0 15px;
-    }
-    
-    .footer p {
-        font-size: 0.875rem;
-    }
-    
-    .social-links {
-        margin-top: 1rem;
-        gap: 1rem;
-    }
-    
-    .social-links a {
-        margin: 0;
-    }
-    
-    .social-links img {
-        width: 20px !important;
-        height: 20px !important;
-    }
-}
-
-/* 自动换行样式 - 用于带有data-i18n属性的文本元素 */
-p[data-i18n],
-h1[data-i18n],
-h2[data-i18n],
-h3[data-i18n],
-h4[data-i18n],
-h5[data-i18n],
-h6[data-i18n] {
-    white-space: pre-line; /* 保留文本中的换行符，同时忽略多余的空白字符 */
-    word-wrap: break-word;
-    word-break: break-word;
-    overflow-wrap: break-word;
-    line-height: 1.6; /* 确保良好的行间距，提高可读性 */
-}
-
-/* 为about.bio3提供额外的样式支持，确保其换行显示正确 */
-p[data-i18n="about.bio3"] {
-    white-space: pre-line; /* 强制使用pre-line以保留换行符 */
-    padding-left: 0; /* 移除左侧padding，确保项目符号正确对齐 */
-}
-
-/* 特殊处理英雄区域的标题，保持其不换行的特性 */
-.hero-title[data-i18n],
-.hero-subtitle[data-i18n] {
-    white-space: nowrap; /* 保持英雄区域标题不换行 */
-    overflow: visible; /* 允许内容溢出（对于超大字体） */
-}
-
-/* 关于页面 */
- .about-main {
-    padding: 5rem 0;
-    background-color: var(--white-color);
-}
-
- .page-title {
-    text-align: center;
-    margin-bottom: 3rem;
-    position: relative;
-}
-
- .page-title::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 3px;
-    background-color: var(--primary-color);
-    margin: 1rem auto 0;
-}
-
- .about-content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin-bottom: 3rem;
-    align-items: center;
-}
-
- .about-image {
-    flex: 0 0 auto;
-    max-width: 300px; /* 减小最大宽度，使图片更适合页面 */
-}
-
- .about-image img {
-    width: 100%; /* 图片宽度充满容器 */
-    height: auto; /* 高度自动适应，保持比例 */
-    max-height: 400px; /* 设置最大高度，防止图片过高 */
-    object-fit: contain; /* 保持原始比例不变形 */
-    border-radius: 4px; /* 添加轻微圆角，更美观 */
-}
-
- .about-text {
-    flex: 1;
-    min-width: 300px; /* 确保在小屏幕上也有足够的宽度 */
-}
-
- .about-section {
-    margin-bottom: 4rem;
-    padding: 2rem;
-    background-color: var(--light-color);
-    border-radius: 2px;
-    box-shadow: var(--shadow);
-}
-
- .about-section h3 {
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--primary-color);
-}
-
- /* 教育背景样式 */
- .education-content {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
- .education-item {
-    background-color: var(--white-color);
-    padding: 1.5rem;
-    border-radius: 2px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
- .education-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
- .education-item h4 {
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-}
-
- .education-date {
-    color: var(--accent-color);
-    font-weight: bold;
-    font-style: italic;
-    margin-bottom: 0.5rem;
-}
-
- /* 获奖经历样式 */
- .achievements-content {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
- .achievement-item {
-    background-color: var(--white-color);
-    padding: 1.5rem;
-    border-radius: 2px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
- .achievement-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
- .achievement-item::before {
-    content: '🏆';
-    position: absolute;
-    left: -15px;
-    top: 15px;
-    background-color: var(--secondary-color);
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-}
-
- /* 演出经历样式 */
- .performances-content {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
- .performance-item {
-    background-color: var(--white-color);
-    padding: 1.5rem;
-    border-radius: 2px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
- .performance-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
- .performance-date {
-    color: var(--accent-color);
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    font-style: italic;
-}
-
- /* 响应式设计 */
- @media (max-width: 768px) {
-    .about-section {
-        padding: 1.5rem;
-        margin-bottom: 2rem;
-    }
-    
-    .achievement-item::before {
-        left: 10px;
-        top: -15px;
-    }
-    
-    .about-content {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
- .achievements {
-    background-color: var(--light-color);
-    padding: 2rem;
-    border-radius: 2px;
-}
-
- .achievement-list {
-    list-style: none;
-}
-
- .achievement-list li {
-    margin-bottom: 1rem;
-    position: relative;
-    padding-left: 1.5rem;
-}
-
- .achievement-list li::before {
-    content: '•';
-    color: var(--primary-color);
-    font-size: 1.5rem;
-    position: absolute;
-    left: 0;
-    top: -5px;
-}
-
-/* 媒体页面 */
- .media-main {
-    padding: 5rem 0;
-    background-color: var(--white-color);
-}
-
- .page-description {
-    text-align: center;
-    margin-bottom: 3rem;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
- .featured-video {
-    margin-bottom: 5rem;
-}
-
- .video-container {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9比例 */
-    height: 0;
-    overflow: hidden;
-    margin-bottom: 1rem; /* 增加底部间距 */
-    box-shadow: var(--shadow);
-}
-
- .video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
- .video-caption {
-    text-align: center;
-    font-style: italic;
-    color: #666;
-}
-
- .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 4rem; /* 增加网格间距 */
-}
-
- .video-item {
-    background-color: var(--light-color);
-    border-radius: 2px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-}
-
- .video-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
- .video-thumbnail {
-    position: relative;
-    overflow: hidden;
-    height: 180px;
-}
-
- .video-thumbnail img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: var(--transition);
-}
-
- .video-item:hover .video-thumbnail img {
-    transform: scale(1.05);
-}
-
- .play-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60px;
-    height: 60px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: var(--transition);
-}
-
- .play-icon::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 10px 0 10px 20px;
-    border-color: transparent transparent transparent var(--primary-color);
-    margin-left: 5px;
-}
-
- .video-item:hover .play-icon {
-    opacity: 1;
-}
-
- .video-item h3, .video-item p {
-    padding: 0 1.5rem;
-}
-
- .video-item h3 {
-    margin-top: 1.5rem;
-}
-
- .video-item p {
-    color: #666;
-    font-size: 0.875rem;
-    margin-bottom: 1.5rem;
-}
-
-/* 演出日程页面 */
- .schedule-main {
-    padding: 5rem 0;
-    background-color: var(--white-color);
-}
-
- .schedule-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 3rem;
-    box-shadow: var(--shadow);
-    overflow: hidden;
-    border-radius: 2px;
-}
-
- .schedule-header {
-    display: flex;
-    background-color: var(--primary-color);
-    color: var(--white-color);
-    font-weight: bold;
-}
-
- .schedule-item {
-    display: flex;
-    border-bottom: 1px solid #eee;
-    transition: var(--transition);
-}
-
- .schedule-item:hover {
-    background-color: var(--secondary-color);
-}
-
- .date-col, .event-col, .location-col, .ticket-col {
-    padding: 1.5rem;
-}
-
- .date-col {
-    width: 20%;
-}
-
- .event-col {
-    width: 35%;
-}
-
- .location-col {
-    width: 35%;
-}
-
- .ticket-col {
-    width: 10%;
-    text-align: center;
-}
-
- .subscribe-section {
-    background-color: var(--light-color);
-    padding: 3rem;
-    border-radius: 2px;
-    text-align: center;
-}
-
- .subscribe-form {
-    display: flex;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
- .subscribe-form input {
-    flex: 1;
-    padding: 12px 16px;
-    border: 1px solid #ddd;
-    border-radius: 2px 0 0 2px;
-    font-size: 1rem;
-}
-
- .subscribe-form .btn {
-    border-radius: 0 2px 2px 0;
-}
-
-/* 联系页面 */
- .contact-main {
-    padding: 5rem 0;
-    background-color: var(--white-color);
 }
 
  .contact-content {
@@ -1882,7 +1449,7 @@ p[data-i18n="about.bio3"] {
     }
     
     .hero-slider {
-        max-width: 90%;
+        max-width: 80%;
         height: auto;
         min-height: 40vh;
         margin-top: 2rem;

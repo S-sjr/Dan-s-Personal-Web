@@ -6,7 +6,7 @@ const translations = {
         'nav.media': '媒体中心',
         'nav.schedule': '演出日程',
         'nav.contact': '联系我',
-        'hero.title': '帅文波',
+        'hero.title': '帅 文 波',
         'hero.subtitle': '假声男高音',
         'hero.button': '了解更多',
         'about.subtitle': '关于我',
@@ -22,7 +22,7 @@ const translations = {
             '组别中获得了“VINCERÒ World Opera Competition”第三名 “3°PREMIO”和评论家特别奖“PREMIO CRITICA”\n' +
             '• 意大利第七届“"Giovan Battista Rubini"国际声乐比赛”决赛奖“PREMIO FINALISTI”\n' +
             '• 韩国Daegu举办的第42届“大邱国际声乐大赛Daegu International Vocal Music Competition”的决赛奖“FINALIST”以及大都会歌剧奖“SPECIAL PRIZE-METROPOLITAN OPERA COMPANY“\n' +
-            '他入围过西班牙Barcelona举办的第60-62届 “Tenor Viñas声乐大赛”并闯入半决赛、瑞典Norrköping举办的“Wilhelm Stenhammar国际声乐比赛”并进入半决赛，以及在奥地利Innsbruck举办的著名巴洛克声乐歌剧大赛第15届“Pietro Antonio Cesti国际巴洛克歌剧大赛”并入围半决赛。此外他还入围了例如美国New York举办的第34届“Opera at Florham\'s国际声乐比赛”、第23届“Ottavio ZIINO国际歌剧比赛”，葡萄牙举办的“Cascais International Opera Competition”等众多国际职业大赛。',
+            '他入围过西班牙Barcelona举办的第60-62届 “Tenor Viñas声乐大赛”并闯入semintration。此外他还入围了例如美国New York举办的第34届“Opera at Florham\'s国际声乐比赛”、第23届“Ottavio ZIINO国际歌剧比赛”，葡萄牙举办的“Cascais International Opera Competition”等众多国际职业大赛。',
         'about.bio3': '2025年9月，他加入了德国Waiblingen市，由Thomas Hampsen和Melanie Diener共同举办的International Opernwerkstatt，并与Württembergischen Philharmonie Reutlingen共同演绎音乐会。\n'+
             '2023年他在意大利博洛尼亚的Sala Mozart in the Accademia Filarmonic参与了“博洛尼亚国际声乐比赛获奖者音乐会”。在意大利维罗纳与Teatro Filarmonico剧院乐团合作演出了“Vincerò世界歌剧大赛决赛音乐会”。2022年五月在上海音乐学院“音才助飞”项目的帮助下，他成功在上音歌剧院举办“璀璨明珠”巴洛克音乐实践音乐会。在上海音乐学院室内乐团与恰空古乐团在贺绿汀音乐厅的合作音乐会——《巴洛克室内乐音乐会》中担任Purcell珀塞尔歌剧《The Fairy Queen仙后》Alto主唱与四重合唱。2023年11月参加了由上音歌剧院举办的第16届“艺术歌曲之夜·德俄大师”音乐会。\n' +
             '自2019年起，他成为法国阿尔日莱斯国际艺术节的常驻演员，参与了《Faust浮士德》和《L’Elisir D’Amore爱之甘醇》等歌剧的制作，在上海他饰演了由施恒教授执导的古诺歌剧《Faust》中的角色“Siebel”与歌剧《Romeo et Juliette罗密欧与朱丽叶》中的角色“Stepheno”。',
@@ -161,7 +161,6 @@ const translations = {
         'about.bio3': '2023.05, He held a concert of "Resplendent Pearl" Baroque Music at the Opera House of the Shanghai Conservatory of Music. 2023.06，He performed "Baroque Chamber Music Concert" with the Chamber Orchestra of Shanghai Conservatory of Music. And served as the lead singer and chorus of the alto part of the Purcell opera "The Fairy Queen".2023.06, He performed Gouno‘ opera “Romeo et Juliette” and played “Stepheno” in Shanghai. 2023.11, He attended the “German and Russian Master Concert-Night of Art songs” held at the ShangYin Opera House.\n'+
             'He began to study vocal music in 2016 and tried to learn both tenor and baritone in a period of time. In 2018, he met Italian soprano Francesca Bruni and Shanghai Conservatory of Music Bass- Baritone Pro.Heng Shi, transitionto study Countertenor.\n' +
             'Since 2019, he has become a resident actor of the French "Festival International d\\\'Art Lyrique d\\\'Argeles" and participated in the production of the "Faust" and "L\\\'Elisir D\\\'Amore". 2019.11, He participated in the C.F. Gounod opera "Faust" directed by Shi Heng, a professor at the Shanghai Conservatory of Music. And played "Siebel" in it.',
-        'about.resumeCn': '下载简历',
         'about.resumeEn': 'Download Resume',
         'features.title': 'Gallery',
         'features.item1.title': 'Personal image',
@@ -298,8 +297,7 @@ const translations = {
             'Seit 2019 ist er festes Ensemblemitglied des französischen Festival International d’Art Lyrique d’Argelès und wirkte dort u. a. in den Produktionen der Opern „Faust“ und „L’elisir d’amore“ mit. \n' +
             'Im November 2019 sang er die Rolle des Siebel in Charles Gounods Oper „Faust“ unter der Regie von Prof. Heng Shi am Shanghai Conservatory of Music. \n' +
             'Sein Gesangsstudium begann im Jahr 2016. Anfangs studierte er sowohl Tenor- als auch Bariton-Partien.Im Jahr 2018 begegnete er der italienischen Sopranistin Francesca Bruni sowie dem Bassbariton Prof. Heng Shi vom Shanghai Conservatory of Music und wechselte schließlich zum Fach Countertenor.',
-        'about.resumeCn': '下载简历',
-        'about.resumeEn': 'Download Resume',
+        'about.resumeDe': 'Lebenslauf herunterladen',
         'features.title': 'Galerie',
         'features.item1.title': 'Persönliches Bild',
         'features.item2.title': 'Aufführung',
@@ -365,16 +363,16 @@ const translations = {
         'schedule.event12.date': '30. Juni-1. Juli 2023',
         'schedule.event13': 'Special concert by Baroque Chamber Orchestra of Shanghai Conservatory of Music',
         'schedule.location13': 'Shanghai, China',
-        'schedule.event13.date': '12. Juni 2023',
+        'schedule.event13.date': 'June 12, 2023',
         'schedule.event14': 'Bright Pearl-Concert of Works from Baroque Period',
         'schedule.location14': 'Shanghai, China',
         'schedule.event14.date': '1. Mai 2023',
         'schedule.event15': '60th Tenor Viñas Concurs',
         'schedule.location15': 'Barcelona, Spanien',
-        'schedule.event15.date': '21.-27. Januar 2023',
+        'schedule.event15.date': 'January 21-27, 2023',
         'schedule.event16': 'Gound Opera_Faust (Siebel)',
         'schedule.location16': 'Shanghai, China',
-        'schedule.event16.date': '7. August 2019',
+        'schedule.event16.date': 'July 2019',
         'schedule.ticketButton': 'Tickets kaufen',
         'schedule.reserveButton': 'Reservieren',
         'schedule.comingSoonButton': 'Bald verfügbar',
@@ -437,6 +435,18 @@ function changeLanguage(lang) {
             }
         }
     });
+    
+    // 特殊处理下载简历链接
+    const resumeLink = document.querySelector('.resume-link');
+    if (resumeLink) {
+        if (lang === 'zh') {
+            resumeLink.textContent = translations['zh']['about.resumeCn'];
+        } else if (lang === 'en') {
+            resumeLink.textContent = translations['en']['about.resumeEn'];
+        } else if (lang === 'de') {
+            resumeLink.textContent = translations['de']['about.resumeDe'];
+        }
+    }
 }
 
 // 语言切换按钮事件监听
@@ -459,4 +469,19 @@ window.addEventListener('DOMContentLoaded', function() {
         // 如果保存的语言不支持，则使用英文
         changeLanguage('en');
     }
+    
+    // 页面加载后立即处理简历链接文本
+    setTimeout(() => {
+        const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+        const resumeLink = document.querySelector('.resume-link');
+        if (resumeLink) {
+            if (savedLang === 'zh') {
+                resumeLink.textContent = translations['zh']['about.resumeCn'];
+            } else if (savedLang === 'en') {
+                resumeLink.textContent = translations['en']['about.resumeEn'];
+            } else if (savedLang === 'de') {
+                resumeLink.textContent = translations['de']['about.resumeDe'];
+            }
+        }
+    }, 100);
 });

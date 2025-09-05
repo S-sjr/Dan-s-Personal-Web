@@ -80,6 +80,39 @@
                     pointer-events: none;
                 }
                 
+                /* 调整容器内文字为白色 */
+                .schedule-content-container h3,
+                .schedule-content-container p,
+                .schedule-content-container a,
+                .schedule-content-container span,
+                .schedule-content-container strong {
+                    color: #FFFFFF;
+                }
+                
+                /* 为按钮添加半透明白色背景和边框 */
+                .schedule-content-container .btn-sm {
+                    background-color: rgba(255, 255, 255, 0.2);
+                    border: 1px solid rgba(255, 255, 255, 0.5);
+                    color: #FFFFFF;
+                    transition: all 0.3s ease;
+                }
+                
+                /* 按钮悬停效果 */
+                .schedule-content-container .btn-sm:hover:not(.btn-disabled) {
+                    background-color: rgba(255, 255, 255, 0.3);
+                    border: 1px solid rgba(255, 255, 255, 0.8);
+                }
+                
+                /* 标题和描述文字为白色 */
+                .schedule-main h1.page-title,
+                .schedule-main p.page-description {
+                    color: #FFFFFF;
+                }
+                
+                /* 确保标题下划线显示正常 */
+                .schedule-main h1.page-title::after {
+                    background-color: var(--primary-color);
+                }
                 @media (max-width: 768px) {
                     .about-content {
                         flex-direction: column !important;
@@ -98,6 +131,8 @@
             </style>
 
             <!-- 演出日程 - 使用about-content样式 -->
+            <!-- 所有演出条目的整体容器 -->
+            <div class="schedule-content-container">
             <!-- 第75届维奥蒂音乐比赛 -->
             <div class="about-content">
                 <div class="about-image">
@@ -305,8 +340,9 @@
                     <img src="img/Calendar/Gound Opera_Faust (Siebel).png" alt="古诺歌剧《浮士德》（西贝尔）">
                 </div>
             </div>
-
-           
+            
+            <!-- 结束所有演出条目的整体容器 -->
+            </div>
         </div>
     </main>
 
