@@ -13,7 +13,7 @@ const translations = {
         'about.subtitle': '关于我',
         'about.bio1': '他被欧洲的乐评⼈称之为：⼀个充满戏剧张⼒的嗓⾳。\n' + 
             '本科毕业于上海音乐学院声乐歌剧系（2020-2025），他也是上海音乐学院声乐歌剧系历史上的第一位假声男高音。\n ' +
-            '从2025起，作为研究生就读于德国斯图加特国立音乐与表演艺术学院声乐歌剧系。\n'+ 
+            '2025年起研究生就读于德国斯图加特国立音乐与表演艺术学院声乐歌剧系。\n'+ 
             '他在欧洲求学期间跟随了世界著名花腔女高音歌唱家Cheryl Studer女士，柏林汉斯艾斯勒音乐学院教授Renata Faltin女士学习，同时他还接受过意大利女高音歌唱家Francesco Bruni，韩国男中音歌唱家ChangHan Lim，旅德钢琴家⻢源女士、柏林国家歌剧院Mr.Klauss Sallmann与Mr.Uwe Griem、法兰克福国家歌剧院Mr.Felice Venanzoni...等等的老师们的指导与帮助。\n'+ 
             '2025年他加入了由世界著名男中音歌唱家Thomas Hampson和女高音歌唱家Melanie Diener在德国Waiblingen市组织的国际歌剧工作室Internationale Opernwerkstatt Waiblingen，是该项目2025年度歌剧奖学金的获得者。',
         'about.bio2': '近年来，他的身影活跃在世界众多国际知名赛事，并获得了一些成绩：\n' +
