@@ -11,7 +11,7 @@ const translations = {
         'hero.subtitle': '假声男高音',
         'hero.button': '了解更多',
         'about.subtitle': '关于我',
-        'about.bio1': '他被欧洲的乐评⼈称之为：⼀个富有戏剧张⼒的嗓⾳。\n' + 
+        'about.bio1': '他被欧洲的乐评⼈称之为：“⼀个富有戏剧张⼒的嗓⾳。”\n' + 
             '本科毕业于上海音乐学院声乐歌剧系（2020-2025），他也是上海音乐学院声乐歌剧系历史上的第一位假声男高音。\n ' +
             '2025年起研究生就读于德国斯图加特国立音乐与表演艺术学院声乐歌剧系。\n'+ 
             '他在欧洲求学期间跟随了世界著名花腔女高音歌唱家Cheryl Studer女士，柏林汉斯艾斯勒音乐学院教授Renata Faltin女士学习，同时他还接受过意大利女高音歌唱家Francesco Bruni，韩国男中音歌唱家ChangHan Lim，旅德钢琴家⻢源女士、柏林国家歌剧院Mr.Klauss Sallmann与Mr.Uwe Griem、法兰克福国家歌剧院Mr.Felice Venanzoni...等等的老师们的指导与帮助。\n'+ 
@@ -148,7 +148,7 @@ const translations = {
         'hero.subtitle': 'Countertenor',
         'hero.button': 'Learn More',
         'about.subtitle': 'About Me',
-        'about.bio1': 'WenBo Shuai was commented by European critics as: a voice full of dramatic tension.\n' + 
+        'about.bio1': 'WenBo Shuai was commented by European critics as:" a voice full of dramatic tension."\n' + 
             'He won awards in some international competitions, such as:\n ' +
             '• 42 ° Daegu International Vocal Music Competition- FINALIST / SPECIAL PRIZE"METROPOLITAN OPERA COMPANY"\n'+ 
             '• VII Concorso Lirico Internazionale "Giovan Battista Rubini"- Finalist \n'+ 
